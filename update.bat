@@ -1,17 +1,20 @@
 @echo off
 
-rem Set the path to your mdbook project directory
-set "project_dir=C:\Documentations"
+:: Mettre à jour le sous-dossier src en fonction de C:\Base\test\
+robocopy "C:\Base\test\" "C:\Documentations\src" /MIR
 
-rem Navigate to the project directory
-cd /d "%project_dir%"
+:: Demander à l'utilisateur de saisir le message de commit
+set /p commit_message=Entrez le message de commit : 
 
-rem Build the mdbook
+:: Se déplacer dans le dossier de travail
+cd C:\Documentations
+
+:: Générer le site statique avec mdbook build
 mdbook build
 
-rem Commit and push changes
+::Ajouter, commiter et pousser les changements vers GitHub
 git add -A
-git commit -m "Update documentation"
+git commit -m "%commit_message%"
 git push origin main
 
-msg * La documentation a été mise à jour.
+pause
