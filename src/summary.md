@@ -1,4 +1,4 @@
 # Summary
 
-- [Le personnage](book/le_personnage.html)
-- [Création de personnage](book/creation_de_personnage.html)
+- [Le personnage](le_personnage.md)
+- [Création de personnage](creation_de_personnage.md)
