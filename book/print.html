@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../src/le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="../src/creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -329,22 +329,6 @@ Le joueur s’engage à effectuer un compte rendu de partie de la manière la pl
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
