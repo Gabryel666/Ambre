@@ -14,5 +14,4 @@ git add -A
 git commit -m "Update documentation"
 git push origin main
 
-echo La documentation a été mise à jour.
-pause
+msg La documentation a été mise à jour.
