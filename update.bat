@@ -1,9 +1,17 @@
 @echo off
 
-:: Exécute mdbook build pour générer les fichiers HTML
+rem Set the path to your mdbook project directory
+set "project_dir=C:\Documentations"
+
+rem Navigate to the project directory
+cd /d "%project_dir%"
+
+rem Build the mdbook
 mdbook build
 
-:: Effectue un commit avec un message générique (vous pouvez le personnaliser)
-git add .
+rem Commit and push changes
+git add -A
 git commit -m "Update documentation"
 git push origin main
+
+La documentation a été mise à jour.
