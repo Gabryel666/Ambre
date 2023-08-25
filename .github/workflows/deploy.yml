@@ -1,4 +1,4 @@
-name: Deploy Documentation
+name: Build and Deploy mdBook
 
 on:
   push:
@@ -10,23 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Rust
-        uses: actions/setup-rust@v2
-        with:
-          rust-version: stable
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
 
-      - name: Install mdBook
-        run: cargo install mdbook
+    - name: Install mdbook
+      run: cargo install mdbook
 
-      - name: Build Documentation
-        run: mdbook build
-        working-directory: src
+    - name: Build mdBook
+      run: mdbook build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: src/book
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./book
