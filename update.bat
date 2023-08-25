@@ -17,5 +17,5 @@ git add -A
 git commit -m "%commit_message%"
 git push origin main
 
-@echo Fin du traitement. OK
+@echo Fin du traitement.
 pause
