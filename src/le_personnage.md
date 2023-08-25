@@ -1,4 +1,4 @@
-# Le Personnage test
+# Le Personnage test 2
 
 Ambre édition Dharma est un jeu de rôle intensément centré sur les personnages. Les protagonistes maîtrisent des pouvoirs qui ont des conséquences sur l’environnement de la campagne. Plus qu’ailleurs, ces derniers sont la colonne vertébrale du cadre de jeu, mais également le point focal des enjeux, des conséquences et des responsabilités qu’engendre une telle puissance.
 
