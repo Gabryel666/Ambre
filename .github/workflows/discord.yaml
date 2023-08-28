@@ -24,15 +24,15 @@ jobs:
       run: |
         COMMIT_MESSAGE="${{ steps.get_last_commit_message.outputs.last_commit_message }}"
         curl -X POST -H "Content-Type: application/json" -d '{
-          "content": "Ambre",
+          "content": "",
           "embeds": [
             {
-              "title": "Mise à jour",
+              "title": "Ambre",
               "description": "https://gabryel666.github.io/Ambre/book/index.html",
               "color": 16776960,
               "fields": [
                 {
-                  "name": "Dernier commit",
+                  "name": "Mise à jour :",
                   "value": "'"$COMMIT_MESSAGE"'"
                 }
               ]
