@@ -11,13 +11,14 @@ jobs:
 
     steps:
     - name: Get last commit message
+      id: get_last_commit_message
       run: |
         LAST_COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
         echo "::set-output name=last_commit_message::$LAST_COMMIT_MESSAGE"
 
     - name: Send Discord Notification
       run: |
-        COMMIT_MESSAGE=${{ steps.get_last_commit_message.outputs.last_commit_message }}
+        COMMIT_MESSAGE="${{ steps.get_last_commit_message.outputs.last_commit_message }}"
         curl -X POST -H "Content-Type: application/json" -d '{
           "content": "Ambre",
           "embeds": [
@@ -28,7 +29,7 @@ jobs:
               "fields": [
                 {
                   "name": "Dernier commit",
-                  "value": COMMIT_MESSAGE
+                  "value": "'"$COMMIT_MESSAGE"'"
                 }
               ]
             }
