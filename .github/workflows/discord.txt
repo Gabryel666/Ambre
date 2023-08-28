@@ -1,0 +1,24 @@
+name: Discord Webhook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_discord_notification:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send Discord Notification
+      run: |
+        curl -X POST -H "Content-Type: application/json" -d '{
+          "content": "Ambre",
+          "embeds": [
+            {
+              "title": "Mise à jour",
+              "description": "https://gabryel666.github.io/Documentations/book/index.html",
+              "color": 16776960
+            }
+          ]
+        }' ${{ secrets.DISCORD_WEBHOOK_URL }}
