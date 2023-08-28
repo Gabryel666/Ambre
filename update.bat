@@ -14,7 +14,7 @@ mdbook build
 
 ::Ajouter, commiter et pousser les changements vers GitHub
 git add -A
-git commit -m "%commit_message%"
+git commit -m "%COMMIT_MESSAGE%"
 git push origin main
 
 @echo Fin du traitement.
