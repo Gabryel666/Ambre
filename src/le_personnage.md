@@ -1,4 +1,4 @@
-# Initialisation 5
+# Initialisation 6
 
 # Le Personnage
 
