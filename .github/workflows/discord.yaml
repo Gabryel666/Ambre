@@ -10,9 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Get last commit message
       id: get_last_commit_message
       run: |
+        cd ${{ github.workspace }}  # Se déplacer dans le répertoire du référentiel
         LAST_COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
         echo "::set-output name=last_commit_message::$LAST_COMMIT_MESSAGE"
 
@@ -29,7 +33,7 @@ jobs:
               "fields": [
                 {
                   "name": "Dernier commit",
-                  "value": "'$COMMIT_MESSAGE'"
+                  "value": "'"$COMMIT_MESSAGE"'"
                 }
               ]
             }
