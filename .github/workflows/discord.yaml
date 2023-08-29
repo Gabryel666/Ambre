@@ -30,6 +30,9 @@ jobs:
               "title": "Ambre",
               "description": "[Documents](https://gabryel666.github.io/Ambre/book/index.html)",
               "color": 65280,
+              "thumbnail": {
+                "url": "https://i.imgur.com/nwKhzEA.png"
+              },
               "fields": [
                 {
                   "name": "Mise à jour :",
