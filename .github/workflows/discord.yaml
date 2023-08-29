@@ -28,8 +28,8 @@ jobs:
           "embeds": [
             {
               "title": "Ambre",
-              "description": "https://gabryel666.github.io/Ambre/book/index.html",
-              "color": 16776960,
+              "description": "[Documents](https://gabryel666.github.io/Ambre/book/index.html)",
+              "color": 65280,
               "fields": [
                 {
                   "name": "Mise à jour :",
