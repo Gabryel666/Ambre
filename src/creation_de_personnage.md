@@ -1,4 +1,4 @@
-# test discord Création de personnage
+# Création de personnage
 
 Le processus de création de personnage suit un nombre d’étapes qui peuvent être effectuées dans n’importe quel ordre, une fois le Sang choisi. On peut toutefois suivre l’ordre conseillé ci-dessous afin de facilité le processus de création. La seule chose à suivre scrupuleusement est le décompte des points investis. 
 
