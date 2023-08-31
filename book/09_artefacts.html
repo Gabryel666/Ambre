@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Artefacts</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="00_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Règles</li><li class="chapter-item expanded "><a href="01_le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="02_creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li><li class="chapter-item expanded "><a href="03_les_tests.html"><strong aria-hidden="true">3.</strong> Les tests</a></li><li class="chapter-item expanded "><a href="04_le_karma.html"><strong aria-hidden="true">4.</strong> Le Karma</a></li><li class="chapter-item expanded "><a href="05_le_combat.html"><strong aria-hidden="true">5.</strong> Le combat</a></li><li class="chapter-item expanded "><a href="06_la_sante.html"><strong aria-hidden="true">6.</strong> La santé</a></li><li class="chapter-item expanded "><a href="07_equipement.html"><strong aria-hidden="true">7.</strong> L'équipement</a></li><li class="chapter-item expanded "><a href="08_00_pouvoirs.html"><strong aria-hidden="true">8.</strong> Pouvoirs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="08_01_la_marelle.html"><strong aria-hidden="true">8.1.</strong> La Marelle</a></li><li class="chapter-item expanded "><a href="08_02_le_logrus.html"><strong aria-hidden="true">8.2.</strong> Le Logrus</a></li><li class="chapter-item expanded "><a href="08_03_abysse.html"><strong aria-hidden="true">8.3.</strong> L'Abysse</a></li><li class="chapter-item expanded "><a href="08_04_art_des_atouts.html"><strong aria-hidden="true">8.4.</strong> L'Art des Atouts</a></li><li class="chapter-item expanded "><a href="08_05_metamorphose.html"><strong aria-hidden="true">8.5.</strong> Métamorphose</a></li><li class="chapter-item expanded "><a href="08_06_investiture.html"><strong aria-hidden="true">8.6.</strong> Investiture</a></li><li class="chapter-item expanded "><a href="08_07_sorcellerie.html"><strong aria-hidden="true">8.7.</strong> La Sorcellerie</a></li><li class="chapter-item expanded "><a href="08_08_conjuration.html"><strong aria-hidden="true">8.8.</strong> La Conjuration</a></li></ol></li><li class="chapter-item expanded "><a href="09_artefacts.html" class="active"><strong aria-hidden="true">9.</strong> Artefacts</a></li><li class="chapter-item expanded "><a href="10_ombres_et_mulivers.html"><strong aria-hidden="true">10.</strong> Ombres et multivers</a></li><li class="chapter-item expanded "><a href="11_contacts_et_allies.html"><strong aria-hidden="true">11.</strong> Contacts et alliés</a></li><li class="chapter-item expanded "><a href="12_les_figurants.html"><strong aria-hidden="true">12.</strong> Les figurants</a></li><li class="chapter-item expanded affix "><li class="part-title">Campagne</li><li class="chapter-item expanded "><a href="13_les_acteurs.html"><strong aria-hidden="true">13.</strong> Les acteurs</a></li><li class="chapter-item expanded "><a href="14_lieux_remarquables.html"><strong aria-hidden="true">14.</strong> Lieux remarquables</a></li><li class="chapter-item expanded affix "><li class="part-title">Annexes</li><li class="chapter-item expanded "><a href="15_fiche_de_personnage.html"><strong aria-hidden="true">15.</strong> Fiche de personnage</a></li><li class="chapter-item expanded "><a href="16_carnet_de_personnage.html"><strong aria-hidden="true">16.</strong> Carnet de personnage</a></li><li class="chapter-item expanded "><a href="17_foundryvtt.html"><strong aria-hidden="true">17.</strong> Foundry VTT</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>[TOC]</p>
+<h1 id="artefacts"><a class="header" href="#artefacts">Artefacts</a></h1>
+<p><em>&quot; Au bout d'un moment, je m'arrêtai devant un arbre creux qui devait se trouver là. J'y plongeai la main et en retirai mon épée argentée, que j'attachai à ma ceinture. Peu importait qu'elle se fût trouvée quelque part dans Ambre. Elle était ici à présent, car le bois que je traversais se trouvait dans Ombre.&quot;</em></p>
+<p><em>- Les Fusils d'Avalon -</em></p>
+<p>Dépenser des points pour un objet ou une créature signifie qu'il fait partie de la &quot;réalité&quot; personnelle du personnage. Grayswandir peut être extraite d'Ombre par Corwin à tout moment, même si elle a été perdue, voire détruite. Quand un tel objet est réellement détruit, les points sont en rendus au personnage (bien que le joueur n'en soit pas averti, le Meneur devant leur trouver une utilisation).</p>
+<h2 id="créer-un-artefact-en-cinq-étapes"><a class="header" href="#créer-un-artefact-en-cinq-étapes">Créer un Artefact en cinq étapes</a></h2>
+<p>Vous pouvez créer un objet personnel lors de la création de votre personnage, ou lorsque vous le modifiez dans le cadre de la progression du personnage (à la discrétion du Meneur). Cela signifie dépenser des points pour cet objet. Bien que celui-ci puisse être cher, il sera également sûr,  retournant presque toujours à son propriétaire, jusqu'à devenir un élément de sa légende. Un Conjurateur peut tout à fait acheter également les objets qu'il forge ([voir le chapitre dédié](G:\Mon Drive\Anthony\Jeux de rôle\Ambre\Ambre Dharma\08 08 Conjuration.md))</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Acheter un Artefact</th><th style="text-align: center">Qualités max</th><th style="text-align: center">Pouvoirs d'objets</th><th style="text-align: center">Transferts &amp; multiplication</th></tr></thead><tbody>
+<tr><td style="text-align: center">Coûte des points de création ou de Karma</td><td style="text-align: center">4</td><td style="text-align: center">oui</td><td style="text-align: center">oui</td></tr>
+</tbody></table>
+</div>
+<h4 id="Étape-1--partir-dun-objet-normal"><a class="header" href="#Étape-1--partir-dun-objet-normal">Étape 1 : Partir d'un objet normal</a></h4>
+<p>N'importe quel objet ou créature conviendra. Ce seront typiquement des épées, anneaux, armures ou amulette, des chevaux ou des chiens, mais il peut s'agir de n'importe quoi, d'un homme à un vautour, un lézard ou un éléphant. Ce point de départ est gratuit, aussi exotique qu'il soit.</p>
+<h4 id="Étape-3--ajouter-des-qualités"><a class="header" href="#Étape-3--ajouter-des-qualités">Étape 3 : Ajouter des Qualités</a></h4>
+<p>Les Qualités sont les équivalents pour un &quot;objet&quot; des Attributs pour un personnage. Elles lui donne de la force, de la vitesse, du souffle, une armure ou des armes, ou encore de l'intelligence ou une sensibilité psychique. Des objets inanimés peuvent ainsi être amenés à la vie, tandis que des créatures peuvent en être améliorées.
+Il est à noter que l'intelligence, tout comme la sensibilité psychique, peuvent rendre vulnérable un objet normalement inanimé. Par exemple, une épée est en principe immunisée contre les manipulations psychiques. Dotée de la Parole ou de Sensibilité Psychique, elle sera vulnérable à une attaque ou à une manipulation mentale.</p>
+<h4 id="Étape-4--pouvoirs--transferts"><a class="header" href="#Étape-4--pouvoirs--transferts">Étape 4 : Pouvoirs &amp; transferts</a></h4>
+<p>Les pouvoirs donnent à un objet un contrôle sur l'univers, tel une emprise sur une Ombre ou sur la structure de l'objet lui-même, par exemple. D'autres, comme ceux des Atouts ou de la Magie, peuvent lui être conférés, si le personnage en dispose. Certains objets marchent mieux s'ils peuvent conférer ou transférer leur capacité à leur porteur. Chaque Qualité ou Pouvoir doit être transféré séparément.</p>
+<h4 id="Étape-5--appliquer-le-multiplicateur-de-quantité"><a class="header" href="#Étape-5--appliquer-le-multiplicateur-de-quantité">Étape 5 : Appliquer le Multiplicateur de Quantité</a></h4>
+<p>Une fois calculé le coût total de l'objet, avec tous ses pouvoirs, ses Qualités physiques et psychiques et les transferts nécessaires, et selon Je nombre d'objets que l'on désire, on peut déterminer le Multiplicateur de Quantité à appliquer. Si on veut un seul spécimen, ce multiplicateur sera un.</p>
+<h2 id="artefact-gratuit"><a class="header" href="#artefact-gratuit">Artefact gratuit</a></h2>
+<p>Peu importe comment vous imaginez un objet, il y a de nombreux moyens de l' obtenir en Ambre. Plutôt que de dépenser les points correspondants, vous pouvez le trouver en Ombre. Dans ce cas, le total de ses points vous donnera le temps requis pour trouver ce que vous désirez. Vous n'y consacrerez pas de points, mais il n'y a pas lien entre lui et vous. De plus, vous le procurer demandera du temps. Ces objets sont fragiles et perdront leurs propriétés rapidement au fur et à mesure que le temps passera et en fonction de l'éloignement l'Ombre où ils ont vu le jour.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">Trouver un artefact gratuit</th><th style="text-align: center">Qualités max</th><th style="text-align: center">Pouvoirs d'objets</th><th style="text-align: center">Transferts &amp; multiplication</th><th style="text-align: center">Temps</th><th style="text-align: center">Dissipation</th></tr></thead><tbody>
+<tr><td style="text-align: right">Recherche par la Descente aux Enfers</td><td style="text-align: center">2</td><td style="text-align: center">non</td><td style="text-align: center">non</td><td style="text-align: center">nbr pts x jours</td><td style="text-align: center">Rapide</td></tr>
+<tr><td style="text-align: right">Recherche par extension du Logrus</td><td style="text-align: center">2</td><td style="text-align: center">non</td><td style="text-align: center">non</td><td style="text-align: center">nbr pts x (4 heures)</td><td style="text-align: center">Rapide</td></tr>
+</tbody></table>
+</div>
+<h3 id="rechercher-par-la-descente-aux-enfers"><a class="header" href="#rechercher-par-la-descente-aux-enfers">Rechercher par la Descente aux Enfers</a></h3>
+<p><em>Durée : Quelques jours (nombre de points x jours)</em></p>
+<p>Cela revient à utiliser la Marelle pour l'acquérir. Vous allez en Ombre et vous vous y déplacez jusqu'à ce que vous trouviez ce que vous voulez. Plus grande sera la complexité de l'objet, représentée par le total des points nécessaires pour le créer et plus long sera Je voyage. On peut tabler sur un jour de Descente aux Enfers par point de création. Cette méthode est utilisée très rarement pour de nombreuses raisons. Outre la dangerosité de la méthode, l'effort vaut rarement la récompense. Enfin, les spécificités de l'artefact, en plus d'être temporaires, seront limitées.</p>
+<p>La dissipation générale de l'objet est assez lente pour peu que l'on ne s'éloigne pas de trop de l'Ombre d'origine. </p>
+<h3 id="rechercher-par-extension-du-logrus"><a class="header" href="#rechercher-par-extension-du-logrus">Rechercher par extension du Logrus</a></h3>
+<p><em>Durée : Quelques heures à quelques jours (nombre de points x 4 heures)</em></p>
+<p>C'est la méthode utilisée par les Seigneurs du Chaos. Un tel personnage se contentera d'envoyer une extension du Logrus à travers les Ombres, pour y chercher l'objet désiré. Encore une fois, plus celui-ci sera coûteux en points, plus longtemps il faudra pour le trouver. Etant donné qu'il sera tout à fait spécifique, il faudra compter environ quatre heures par point. Tout comme la descente aux Enfers, et même si le procédé est plus rapide et moins dangereux, les spécificités de l'artefact seront celles de base également.</p>
+<p>Tout comme les objets recherché par une descente aux Enfers, la dissipation générale de l'objet est assez lente. Pour autant, dés que l'objet va voyager en Ombre l'objet va rapidement perde ses capacités de quelques minutes à quelques heures.</p>
+<h2 id="conjuration"><a class="header" href="#conjuration">Conjuration</a></h2>
+<p>A partir du pouvoir de conjuration, un objet est créé selon les spécificités demandées et selon les possibilités du conjurateur. Les résultats sont variés et le pouvoir de conjuration couvre bien plus d'aspects que la simple invocation d'artefact. Pour plus de détail, voir le chapitre dédié au pouvoir de  Conjuration.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">Trouver un artefact gratuit</th><th style="text-align: center">Qualités max</th><th style="text-align: center">Pouvoirs d'objets</th><th style="text-align: center">Transferts &amp; multiplication</th><th style="text-align: center">Temps</th><th style="text-align: center">Dissipation</th></tr></thead><tbody>
+<tr><td style="text-align: right">Forme d'Ombre</td><td style="text-align: center">1</td><td style="text-align: center">non</td><td style="text-align: center">non</td><td style="text-align: center">nbr pts x 15 min</td><td style="text-align: center">6 h ou immédiate</td></tr>
+<tr><td style="text-align: right">Enchantement</td><td style="text-align: center">2</td><td style="text-align: center">non</td><td style="text-align: center">non</td><td style="text-align: center">nbr pts x 30 min</td><td style="text-align: center">Changement d'Ombre</td></tr>
+<tr><td style="text-align: right">Conjuration complexe</td><td style="text-align: center">4</td><td style="text-align: center">non</td><td style="text-align: center">non</td><td style="text-align: center">nbr pts x 1 heure</td><td style="text-align: center">Lente ou variable</td></tr>
+<tr><td style="text-align: right">Conjuration avancée</td><td style="text-align: center">4</td><td style="text-align: center">oui</td><td style="text-align: center">oui</td><td style="text-align: center">nbr pts x 10 min</td><td style="text-align: center">variable</td></tr>
+</tbody></table>
+</div>
+<h2 id="création-dun-objet-dans-le-détail"><a class="header" href="#création-dun-objet-dans-le-détail">Création d'un objet dans le détail</a></h2>
+<p>Cette méthode peut être utilisée pour créer un artefact ou une créature. Les points détermineront combien de temps cela prendra. Bien que ce soit le moyen le plus rapide et le moins coûteux en points, ses créations sont fragiles, et plus faciles à neutraliser ou détruire pour un ennemi, du moins dans les premières formes de conjuration. Les formes avancées de conjuration permettent de créer de véritables objets de pouvoirs défiant toutes les règles habituelles. Voir le chapitre consacré à la Conjuration.</p>
+<h2 id="qualités"><a class="header" href="#qualités">Qualités</a></h2>
+<h3 id="agression-combat"><a class="header" href="#agression-combat">Agression (COMBAT)</a></h3>
+<p>La Qualité d' Agression d'un artefact ou d'une créature ne concerne que ses réflexes et ses compétences naturelles au combat, pas ses armes, sa stratégie ou sa tactique, au contraire de ce qui se passe avec l'Attribut Combat. Ainsi, un chien doté de Réflexes de Combat sera considéré comme ayant un rang Ambrien lorsqu'il se battra en mordant et en bondissant, sans connaître quoi que ce soit aux épées, pistolets ou, pour mémoire, aux échecs et à la stratégie.</p>
+<p><strong>Aptitude au Combat</strong></p>
+<p>Conférée à une ou plusieurs créatures, cette Qualité leur donne l'entraînement requis pour agir en équipe, avec suffisamment d'intelligence pour utiliser une tactique de combat. De plus, elles seront expertes dans le maniement de leurs armes (naturelles ou non) et plus rapides que des humains normaux. Une Aptitude au Combat confère à l'objet qui en est détenteur un rang Chaosien en Combat dans un domaine précis.</p>
+<p><strong>Réflexes de Combat</strong></p>
+<p>Une créature détentrice de cette Qualité est entraînée à combattre intelligemment, mais aussi extraordinairement vite, ce qui la rend plus rapide et plus forte que des adversaires de rang Chaosien en Combat. Un objet ou un humain s'en trouvera amélioré au point de pouvoir rivaliser avec quelqu'un ayant un Combat de rang Chaosien. Si l'objet est dédié à un type de combat précis, sa compétence montera jusqu'à un niveau Ambrien.</p>
+<p><strong>Maitrise du Combat</strong></p>
+<p>Toute chose vivante possédant la Maîtrise du Combat comprend intuitivement le côté tactique d'une situation et peut pressentir les embuscades et les positions désavantageuses en combat, s'adapter à de nouvelles armes ou autres menaces. Sa vitesse est comparable à celle de quelqu'un doté d'un Combat Ambrien. Une chose spécialisée dans un type de combat donné surpassera même la rapidité de réaction d'un Ambrien.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Exemples</th><th style="text-align: center">Score de Combat <sup class="footnote-reference"><a href="#1 ">1</a></sup></th><th style="text-align: center">Conditions</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Aptitude au Combat</td><td style="text-align: center">Entre 12 et 16</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Réflexes de Combat</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Maitrise du Combat</td><td style="text-align: center">Entre 21 et 24</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="vitalité-force"><a class="header" href="#vitalité-force">Vitalité (FORCE)</a></h3>
+<p>Représente la force (pas seulement la force physique, mais aussi la capacité vitale) d'un être. Rappelez-vous qu'une personne qui utilise un objet transférant sa Vitalité peut accomplir des performances musculaires équivalentes mais n'aura pas la pérennité que lui donnerait l' Attribut Force.</p>
+<p><strong>Vitalité Animale</strong>
+Utilisée pour amener un objet inanimé à la vie, la Vitalité Animale lui confère la force normale d'un animal.</p>
+<p><strong>Vitalité doublée</strong>
+Un animal ordinaire, bien gue déjà assez fort, sera capable de sauter deux fois plus loin, bondir deux fois plus haut ou porter une charge deux fois plus lourde qu'auparavant. Cela élève aussi la Force d'un humain au rang Chaosien.</p>
+<p><strong>Vitalité Énorme</strong>
+Un animal devient beaucoup plus fort, capable d' effectuer des bonds extraordinaires et de développer une force colossale. Un humain doté d'une telle Vitalité voit sa Force élevée au rang Ambrien.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Score de Force<sup class="footnote-reference"><a href="#1 ">1</a></sup></th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Vitalité Animale</td><td style="text-align: center">Amène à la vie</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Vitalité supérieure</td><td style="text-align: center">Entre 12 et 16</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Vitalité Énorme</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="souffle-endurance"><a class="header" href="#souffle-endurance">Souffle (ENDURANCE)</a></h3>
+<p>L'endurance d'un objet. Elle ne doit pas être confondue avec l'Endurance d' Ambre, car si elle indique la durée maximale possible pour un effort, elle n'apporte aucune des qualités de guérison ou de régénération qui vont avec l' Attribut. Les objets inanimés auxquels on donne de la Vitalité ou des capacités de mouvement commencent avec un souffle très faible et se fatiguent rapidement.</p>
+<p><strong>Souffle Supérieur</strong>
+Une créature pourra courir, combattre ou effectuer des actions difficiles deux fois plus longtemps qu'un de ses semblables normaux. Cela correspond à une Endurance Chaosienne pour un humain ou un objet.</p>
+<p><strong>Souffle Ambrien</strong>
+Une créature peut courir ou combattre au maximum de son énergie pendant des heures sans s'épuiser. Un humain ou un objet inanimé acquerra une Endurance Ambrienne.</p>
+<p><strong>Souffle Surnaturel</strong>
+La créature (ou l'objet) ne se fatiguera tout simplement jamais.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Score de d'Endurance<sup class="footnote-reference"><a href="#1 ">1</a></sup></th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Souffle Supérieur</td><td style="text-align: center">Entre 12 et 16</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Souffle Ambrien</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Souffle Surnaturel</td><td style="text-align: center">Entre 21 et 24</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité unique</th><th style="text-align: center">Condition</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Inépuisable</td><td style="text-align: center">Souffle Surnaturel</td><td style="text-align: center">Endurance &gt; 20</td></tr>
+</tbody></table>
+</div>
+<h3 id="intelligence-et-communication-pouvoir"><a class="header" href="#intelligence-et-communication-pouvoir">Intelligence et communication (POUVOIR)</a></h3>
+<p>La plupart des choses, objets ou créatures peuvent être créés pourvus d'une intelligence.</p>
+<p><strong>Parole</strong>
+La chose parle la langue de son possesseur, en général le Thari avec un vocabulaire limité. Appliquée à un objet inanimée, cette option signifie qu'il peut comprendre et obéir. Dans tous les cas, le sujet se comporte comme un animal très intelligent, tel un chien bien entraîné. Il est loyal envers son propriétaire et capable d'agir seul si on lui en donne l'ordre. D tels objets, si on ne le leur interdit pas, essayeront toujours de rejoindre et d'aider leur possesseur.</p>
+<p><strong>Vocalises</strong>
+Outre simplement parler, la chose peut s' exprimer avec une voix normale, chanter, fredonner, siffler comme un humain moyen... Elle est assez intelligente pour comprendre des ordres complexes, faire des plans et se débrouiller seule afin d'accomplir une mission. De plus, sa mémoire est bonne, elle peut jongler avec les chiffres, les problèmes de logique et sait lire, si on le lui a appris.</p>
+<p><strong>Intelligence</strong>
+Le sujet est aussi intelligent qu'un humain doué , capable de comprendre les mathématiques, la littérature et la philosophie, d'apprendre des langues très variées.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Score de Pouvoir<sup class="footnote-reference"><a href="#1 ">1</a></sup></th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Parole</td><td style="text-align: center">&lt; 6</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Vocalises</td><td style="text-align: center">Entre 6 et 10</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Intelligence</td><td style="text-align: center">Entre 11 à 14</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="capacité-psychique-sens"><a class="header" href="#capacité-psychique-sens">Capacité Psychique (SENS)</a></h3>
+<p>Cette Qualité confère une version limitée de I' Attribut Psyché qui ne concerne que la sensibilité aux phénomènes psychiques. Par exemple, un humain normalement dénué de toute sensibilité psychique auquel on accorderait la Sensibilité Psychique pourrait reconnaître la &quot;froideur&quot; des Atouts mais pas opposer de résistance à un contact par Atout.</p>
+<p><strong>Sensibilité Psychique</strong>
+Égale au rang Chaosien. Le sujet (peut communiquer d'esprit à esprit avec qui le touche. Il aura l'intelligence d'une créature normale de même type ou, s'il est doté de la parole (voir plus haut), celle correspondant à cette capacité. Un objet inanimé muet deviendra apte à recevoir des ordres et à obéir à des instructions précises.</p>
+<p><strong>Sens du Danger</strong>
+Permet de pressentir le danger, mais pas avec précision. Le sujet percevra la direction générale et la distance des pensées et émotions hostiles. Ceci n'inclut pas les pièges et menaces non vivantes. Cette Qualité donne aussi les avantages et les défauts de la Sensibilité Psychique.</p>
+<p><strong>Perception Extrasensorielle</strong>
+Par le biais de brèves perceptions, le sujet peut sentir de possibles événements futurs. Quelle que soit la distance, il &quot;sentira&quot; toujours que son propriétaire est en danger. En plus de pouvoir établir un contact mental avec quiconque sera proche de lui, il pourra également atteindre un esprit connu à travers les Ombres. Ce processus sera néanmoins plus long et bien moins fiable qu'un contact par Atout, et ne permettra pas le transfert d'un point à un autre de quelque manière que ce soit. Perdu, il essayera de contacter son propriétaire. Son intelligence n'excédera pas celle d'un spécimen normal ou,dans le cas d'un artefact, un niveau autorisant tout juste la communication. Il n'aura pas non plus de pouvoir psychique qui puisse être utilisé lors d'un duel mental.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Score de Sens  <sup class="footnote-reference"><a href="#1 ">1</a></sup></th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Sensibilité Psychique</td><td style="text-align: center">Entre 12 et 16</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Empathique</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Prescient</td><td style="text-align: center">Entre 21 et 24</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité unique</th><th style="text-align: center">Condition</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Sens du Danger</td><td style="text-align: center">Empathique</td><td style="text-align: center">Sens &gt; 10</td></tr>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Perception Extrasensorielle</td><td style="text-align: center">Prescient</td><td style="text-align: center">Sens &gt; 16</td></tr>
+</tbody></table>
+</div>
+<h3 id="défense-psychique-volontÉ"><a class="header" href="#défense-psychique-volontÉ">Défense Psychique (VOLONTÉ)</a></h3>
+<p>Un artefact ou une créature doté d'une Défense Psychique peut se prémunir contre des contacts et des
+attaques mentaux, mais ne dispose d'aucun pouvoir offensif ni ne peut créer de lien psychique.</p>
+<p><strong>Résistance Psychique</strong>
+Le détenteur de cette Qualité résiste à la plupart des attaques ou manipulations psychiques. Cette défense peut, être surmontée mais cela équivaut à surclasser une Psyché de rang Chaosien.</p>
+<p><strong>Camouflage Psychique</strong>
+Capacité de se &quot;voiler&quot;, de sorte que ses émanations psychiques ne soient pas détectées. Cela couvre aussi les émanations dues à l'intelligence (Parole), aux pouvoirs mentaux (Sensibilité Psychique) ou à tout autre pouvoir que le sujet puisse posséder. Bien sûr, si une attaque psychique le frappe ou si un contact mental est noué, le déguisement tombe. En ce qui concerne la force de la défense, elle correspond à un rang Ambrien en Psyché.</p>
+<p><strong>Barrière Mentale</strong>
+Le sujet est immunisé contre TOUTES les attaques psychiques. Ceci, notons-le, est incompatible avec toute possibilité de Sensibilité ou de communication psychique. En d'autres termes, s'il ne peut être atteint par une attaque mentale, il ne peut non plus employer aucune forme de communication mentale (y compris les Atouts) ou de sensibilité psychique. Il est possible que cette Barrière Mentale soit dissipable à volonté, mais son bénéficiaire doit alors être pourvu d'un mécanisme (interrupteur), ou d'une intelligence suffisante pour obéir à des ordres vocaux ou tactiles. Celui qui est protégé par une possession de ce type se trouve également empêché d'utiliser sa Psyché et ses Atouts, de même que de &quot;sentir&quot; quelque chose psychiquement. Un sujet ayant une Barrière Psychique sera évident aux yeux de quiconque est doué d'une forte sensibilité psychique.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Score de Volonté  1</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Résistance Psychique</td><td style="text-align: center">Entre 12 et 16</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Volonté de fer</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Esprit impénétrable</td><td style="text-align: center">Entre 21 et 24</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité unique</th><th style="text-align: center">Condition</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Camouflage Psychique</td><td style="text-align: center">Volonté de fer</td><td style="text-align: center">Volonté &gt; 10</td></tr>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Barrière Mentale</td><td style="text-align: center">Esprit impénétrable</td><td style="text-align: center">Volonté &gt; 20</td></tr>
+</tbody></table>
+</div>
+<h3 id="mouvement"><a class="header" href="#mouvement">Mouvement</a></h3>
+<p>Sert à animer un objet immobile ou à améliorer la vitesse naturelle de quelque chose. Les modifications en question ne sont pas utiles en combat, car elles concernent plutôt les déplacements prolongés comme la course, pas les réflexes et petits mouvements qui ont cours en combat.</p>
+<p>**Mobile **
+Pour les objets immobiles normalement. La vitesse acquise dépend des possibilités de l'objet. S'il a des roues, des pattes ou autre moyen de locomotion, et si le terrain le permet, il aura une vitesse équivalente à celle &lt;l'un homme au pas. Un objet dépourvu d'équipement locomoteur (comme le lacet d'étrangleur de Merlin) rampera et se faufilera mais, s'il n'a pas au moins une Vitalité animale, il se déplacera lentement et sera trop faible pour grimper quelque part ou exercer la moindre traction ou pression.</p>
+<p><strong>Rapide</strong>
+Une créature dotée de capacités motrices, comme un daim, un chien ou un cheval, doublera sa vitesse normale. Cela donnera en général quelque chose comme 50 km/ h. Un objet figé à la base, mais doté de &quot;membres&quot; locomoteurs, atteindra une vitesse similaire, tandis qu'un autre qui en sera dépourvu rampera à la vitesse d'un homme qui court.</p>
+<p><strong>Vitesse d'un Véhicule</strong>
+Une créature assez rapide au départ, comme un tigre ou une bicyclette, voit sa vitesse augmentée au point de rivaliser avec celle d'un véhicule motorisé (voiture, motocyclette). Un chien ou un loup peut atteindre 95 km/h et un cheval 120 km/h ou plus. Un objet dépourvu de capacités locomotrices pourra aller jusqu'à 30 km/h.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité unique</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">+1</td><td style="text-align: center">Mobile</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">+2</td><td style="text-align: center">Rapide</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">+4</td><td style="text-align: center">Vitesse d'un Véhicule</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="dégâts"><a class="header" href="#dégâts">Dégâts</a></h3>
+<p>Englobent les blessures que peut infliger un objet, en particulier une arme ou un accessoire ayant une pointe ou une arête tranchante, ou encore les armes naturelles d'une créature, telles que dents ou griffes.</p>
+<p><strong>Extra-Dur</strong>
+Pour un objet, cette Qualité donne à la partie qui frappe la capacité d'infliger de grands dégâts sans en subir elle-même. Pour un animal, elle signifie que ses &quot;points d'attaque&quot;, crocs, griffes cornes ou sabots, ne seront pas lésés lorsqu'il s'en prendra à quelque chose de dur et d'impénétrable. Des griffes ordinaires ripant sur un bâtiment en béton seront probablement abîmées, sans faire beaucoup de mal. Les mêmes, rendues extra-dures, ne subiront aucuns dommages et laisseront leur empreinte sur le matériau. Une arme extra-dure aura plus de facilité à passer au travers d'une armure.</p>
+<p><strong>Armes à Feu</strong>
+Comme dans le cas précédent, une arme se voit dotée d'une longévité et d'une facilité à passer les armures supérieures à la normale. Cette option accroît en outre les dégâts infligés, de sorte qu'une épée qui causerait normalement une blessure légère se trouve en faire une grave. Une telle arme pénètre facilement les armures Résistantes au Armes Blanches et, avec du temps et de l'adresse, on peut même percer des armures Résistantes aux Armes à Feu.</p>
+<p><strong>Dégâts mortels</strong>
+Les crocs, les griffes ou l'arme, en plus d'être extrêmement résistants, peuvent infliger des dommages très sérieux à leur cible. Les blessures causées sont toujours graves et souvent fatales. Ces armes pénètrent toutes les armures, même si elles sont Invulnérables.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Bonus aux dégâts</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Extra-Dur</td><td style="text-align: center">Menace +1</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Double dommages</td><td style="text-align: center">Menace +2</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Dégâts mortels</td><td style="text-align: center">Menace +3</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="résistance-aux-dégâts"><a class="header" href="#résistance-aux-dégâts">Résistance aux dégâts</a></h3>
+<p>C'est l'équivalent d'une armure. Un objet aussi bien qu'une créature peut bénéficier d'une protection contre
+diverses menaces.</p>
+<p><strong>Armes Blanches</strong>
+Les épées, flèches, pointes de lances normales et de nombreuses autres armes sont repoussées par la surface de l'armure, et celles qui la pénètrent se trouvent avoir un effet réduit.</p>
+<p><strong>Armes à Feu</strong>
+En plus des armes d'estoc ou de taille, la créature ignore les armes à feu, les explosions et le feu.</p>
+<p><strong>Invulnérabilité</strong>
+Son bénéficiaire ne peut être lésé par quelque arme conventionnelle que ce soit, y compris les armes blanches, les armes à feu et celles à rayon.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Qualité</th><th style="text-align: center">Bonus à l'armure</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Armes Blanches</td><td style="text-align: center">Défense +1</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Armes à Feu</td><td style="text-align: center">Défense +2</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Invulnérabilité</td><td style="text-align: center">Défense +3</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h2 id="pouvoirs"><a class="header" href="#pouvoirs">Pouvoirs</a></h2>
+<h3 id="mouvement-en-ombre"><a class="header" href="#mouvement-en-ombre">Mouvement en Ombre</a></h3>
+<p>Alloue à son détenteur une capacité limitée à se déplacer en Ombre. En général, il s'agit d'une utilisation d'une forme intrinsèque de magie plutôt que de la Marelle, du Logrus ou des Atouts.</p>
+<p><strong>Pister en Ombre</strong>
+Capacité de suivre la piste de quelqu'un d'autre qui se déplace en Ombre.</p>
+<p><strong>Chemin d'Ombre / Ancre du Logrus</strong>
+Le sujet peut trouver un chemin vers une Ombre qu'il connaît bien. S'il s'agit d'un itinéraire qu'il a déjà emprunté, sa vitesse sera équivalente à celle d'une Descente aux Enfers. Toutefois, s'il est perdu dans un endroit inconnu, sans savoir par où passer pour atteindre son but, il pourra lui falloir beaucoup plus longtemps pour, après bien des erreurs, arriver à destination.</p>
+<p><strong>Recherche en Ombre / Attaches du Logrus</strong>
+Le sujet a la possibilité de se déplacer volontairement en Ombre vers une chose ou une personne. Il ne peut pas s'y mouvoir librement mais seulement dans la &quot;direction&quot; de ce qu'il recherche, a tendance à utiliser les pires chemins des Descentes aux Enfers, et amène souvent à une suite de fausses pistes à travers des Ombres qui peuvent être dangereuses.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir (Marelle)</th><th style="text-align: center">Conditions</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Pister en Ombre</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Chemin d'Ombre</td><td style="text-align: center">Marche en Ombre</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Recherche en Ombre</td><td style="text-align: center">Marche en Ombre</td></tr>
+<tr><td style="text-align: center"><strong>Coût</strong></td><td style="text-align: center"><strong>Pouvoir (Logrus)</strong></td><td style="text-align: center"><strong>Conditions</strong></td></tr>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Pister en Ombre</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Ancre du Logrus</td><td style="text-align: center">Evocation du Logrus</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Attaches du Logrus</td><td style="text-align: center">Evocation du Logrus</td></tr>
+</tbody></table>
+</div>
+<h3 id="contrôle-dombre"><a class="header" href="#contrôle-dombre">Contrôle d'Ombre</a></h3>
+<p>C'est le pouvoir de contrôler les Ombres. Chacune de ses formes inclut les précédentes.</p>
+<p><strong>Modeler la substance d'Ombre / Distordre la substance d'Ombre</strong>
+Changer des particularités d'une Ombre, par exemple altérer des pièces de monnaie pour qu'elles correspondent à l' Ombre où l'on est.</p>
+<p><strong>Influencer les événements / Effet papillon</strong>
+Influencer les créatures et les habitants d'une Ombre, comme rendre amical un chien hargneux ou incliner au partage gratuit de ses informations une personne qui voudrait être payée.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir (Marelle)</th><th style="text-align: center">Conditions</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Manipuler la substance d'Ombre</td><td style="text-align: center">Manipulation d'Ombre</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Influencer les événements</td><td style="text-align: center">Manipuler les Possibles</td></tr>
+<tr><td style="text-align: center"><strong>Coût</strong></td><td style="text-align: center"><strong>Pouvoir (Logrus)</strong></td><td style="text-align: center"><strong>Conditions</strong></td></tr>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Distordre la substance d'Ombre</td><td style="text-align: center">Distorsion d'Ombre</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Effet papillon</td><td style="text-align: center">Distorsion d'Ombre</td></tr>
+</tbody></table>
+</div>
+<h3 id="guérison"><a class="header" href="#guérison">Guérison</a></h3>
+<p>Pour un objet inanimé, il s'agira d'une capacité d'autoréparation. Même complètement détruit, il finira par se rassembler. Dans le cas d'une créature, ces pouvoirs accéléreront sa vitesse de guérison et de cicatrisation.</p>
+<p><strong>Autoréparation</strong>
+Ce pouvoir dote un objet inanimé d'une capacité d'autoréparation lente, progressive, de même rythme que la guérison de blessures similaires chez un être vivant. Un tel être guérit environ deux fois plus vite que la normale.</p>
+<p><strong>Guérison rapide</strong>
+Le détenteur de ce pouvoir, vivant ou non, guérira comme s'il avait une Endurance de rang Ambrien, récupérant d'une blessure légère dans la journée, et des dommages les plus sérieux en quelques semaines. Un morceau du &quot;corps&quot; amputé repoussera progressivement même si cela doit prendre des années.</p>
+<p><strong>Régénération</strong>
+N'importe quel dégâts seront réparés, rapidement, en quelques minutes. Même faire repousser un membre perdu ne prendra pas plus d'une heure.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Autoréparation</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Guérison rapide</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Régénération</td><td style="text-align: center">-</td></tr>
+</tbody></table>
+</div>
+<h3 id="polymorphie"><a class="header" href="#polymorphie">Polymorphie</a></h3>
+<p>Toute forme que prendra le sujet aura les caractéristiques normales de cette forme. Ainsi celle d'un animal volant donnera la possibilité de voler. De même, chaque Qualité ou Pouvoir du sujet sera conservée : une épée infligeant des Dommages Mortels, transformée en chat, aura des griffes et des crocs qui infligeront également des Dommages Mortels. Des métamorphoses plus exotiques sembleront donner à leur bénéficiaire des pouvoirs magiques. Changé en un matériau transparent, il sera invisible, tandis qu'adopter une matière extrêmement dure lui permettra de résister à de nombreuses armes et agressions.</p>
+<p><strong>Variante de forme</strong>
+Le sujet a une forme en laquelle il peut se changer. Celle-ci doit être décrite en détail lors de sa création.</p>
+<p><strong>Formes variables</strong>
+Il dispose d'un certain nombre de formes alternatives, avec un maximum de douze, décrites lors de sa création.</p>
+<p><strong>Métamorphose Limitée</strong>
+Il peut prendre la forme de tout être ou chose de taille et de masse équivalentes. Au départ, il est limité à quelques aspects qu'il connaît, mais il peut en apprendre de nouveaux. Acquérir des pouvoirs ou la personnalité de quelqu'un en se transformant ne lui est pas possible, non plus que se soigner ou se réparer rapidement.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Variante de forme</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Formes variables</td><td style="text-align: center">-</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Métamorphose Limitée</td><td style="text-align: center">Morphose</td></tr>
+</tbody></table>
+</div>
+<h3 id="pouvoir-datouts"><a class="header" href="#pouvoir-datouts">Pouvoir d'Atouts</a></h3>
+<p>Tout artefact ou créature peut être &quot;construit&quot; autour d'un Atout. Toutefois, seul un maître des Atouts peut créer un tel sujet : Il est impossible de le &quot;trouver&quot; en Ombre ou de le conjurer.</p>
+<p><strong>Support d'Atout</strong>
+L'objet peut agir comme un Atout, car il contient une image créée par un artiste. Il a la durée de vie des Atouts et leur résistance aux actions de la Marelle ou du Logrus. L'image peut être peinte sur une carte comme c'est l'habitude, tissée dans un vêtement ou gravée sur du métal. Ce pouvoir ne peut pas être installé dans une créature.</p>
+<p><strong>Jeu d'Atouts Personnel</strong>
+Comme tout autre artefact, un jeu d' Atouts personnel est lié étroitement à son possesseur, ce qui veut dire que s'il était perdu, il serait toujours possible de le rechercher en Ombre. Le jeu ne comprend que les cartes que l'artiste peut créer, mais une fois qu'il a été acheté, ce dernier peut y ajouter de nouvelles lames sans rien dépenser de plus (ceci ne s' applique qu'aux Atouts qu'il dessine lui-même). On peut acheter plusieurs exemplaires d'un même jeu, avec l'option &quot;Recensé&quot; (coût total multiplié par deux), pour que d'autres personnages puissent en avoir un.</p>
+<p><strong>Énergie des Atouts</strong>
+Le sujet, créé par un artiste des Atouts, est &quot;semblable&quot; à un Atout car porteur de leur pouvoir. Bien qu'il soit possible de lui en donner l'aspect, son utilité principale est qu'il fonctionne grâce à l'énergie des Atouts.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Support d'Atout</td><td style="text-align: center">Dessin d'atout, sur objet</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Jeu d'Atouts Personnel</td><td style="text-align: center">Dessin d'atout</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Énergie des Atouts</td><td style="text-align: center">Alimentation d'objet / du vivant</td></tr>
+</tbody></table>
+</div>
+<h3 id="stockage-de-sorts"><a class="header" href="#stockage-de-sorts">Stockage de sorts</a></h3>
+<p>&quot;Ranger&quot; ou &quot;stocker&quot; des sortilèges dans un sujet implique qu'il ait un pouvoir spécial. Une fois ceci fait, on les lance en prononçant les clés nécessaires. Ils doivent être &quot;chargés&quot; par quelqu'un possédant le pouvoir de Sorcellerie et, une fois jetés, disparaissent de l'objet et doivent y être replacés pour une utilisation ultérieure. Cette option n'est disponible que pour les personnages possédant les pouvoirs de Sorcellerie et de Conjuration.</p>
+<p><strong>Stockage d'un Sort</strong>
+Le sujet peut contenir un sortilège. Celui-ci est incomplet et doit être lancé par quelqu'un qui sait utiliser la magie.</p>
+<p><strong>Stockage de Sorts Recensés</strong>
+Comme précédemment, mais on peut ranger jusqu'à douze sortilèges.</p>
+<p><strong>Stockage et Lancement de Sorts</strong>
+Non content de contenir des sortilèges, le sujet peut les jeter lui-même. Il en porte douze au maximum. Une créature ou n'importe quoi de &quot;vivant&quot; (possédant une intelligence ou une Psyché) pourra lancer le &quot;sort&quot; de sa propre initiative. Dans le cas d'objets inanimés, dépourvus d'intellect, ce pouvoir signifie que le propriétaire de l'artefact peut commander le déclenchement des sorts sans avoir à faire l'effort de les lancer lui-même.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Coût</th><th style="text-align: center">Pouvoir</th><th style="text-align: center">Conditions de Pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">Stockage d'un Sort</td><td style="text-align: center">Sorcellerie</td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">Stockage de Sorts Recensés</td><td style="text-align: center">Sorcellerie</td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Stockage et Lancement de Sorts</td><td style="text-align: center">Sorcellerie Avancée</td></tr>
+</tbody></table>
+</div>
+<h3 id="transfert"><a class="header" href="#transfert">Transfert</a></h3>
+<p>Certains sujets sont créés de façon à conférer un pouvoir à leur propriétaire. Un PJ dont la Force a été descendue au niveau Humain pourra fabriquer un artefact qui compensera cette baisse, une &quot;Ceinture de Force&quot;, avec une Force équivalente au rang Ambrien (4 points) et le modificateur &quot;Transfert de Qualité&quot; (5 points) pour un total de 9 points. Le port de cet objet lui donnera une Force de rang Ambrien.
+Il est important de noter que les effets de plusieurs transferts ne sont pas cumulatifs : un personnage ayant une Force Ambrienne ne bénéficiera en aucune façon du port d'une ceinture conférant une Force de rang Ambrien. Un tel transfert remplace les Attributs de l'utilisateur par d'autres, il ne leur ajoute rien. Ainsi se servir d'une épée conférant des Réflexes de Combat (rang Ambrien) donnera un Combat Ambrien, même si on est normalement mieux classé.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Qualité</th><th>Description</th><th style="text-align: center">Coût</th></tr></thead><tbody>
+<tr><td style="text-align: center">Transfert de Qualité</td><td>Exemple : Une épée possédant la Qualité &quot;Résistance aux Armes à Feu&quot; (2 points) combinée à un transfert (5 points) coûtera 7 points en tout, et celui qui la tiendra sera&lt; protégé par sa Qualité de défense. Chaque transfert correspond à une Qualité. 5 points par Qualité.</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Transfert de Pouvoir</td><td>Comme ci-dessus, chaque transfert correspond à un pouvoir. 10 points par pouvoir.</td><td style="text-align: center"></td></tr>
+</tbody></table>
+</div>
+<h2 id="multiplicateur-de-quantité"><a class="header" href="#multiplicateur-de-quantité">Multiplicateur de quantité</a></h2>
+<p>Tout sujet doit être défini également par la quantité qui en existe. Son coût, fonction de ses Qualités, pouvoirs et Transferts éventuels, est alors multiplié par un facteur dépendant de cette quantité.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Multiplicateur</th><th>Description</th><th style="text-align: center">Coût</th></tr></thead><tbody>
+<tr><td style="text-align: center">Unique</td><td>Il n'y a qu'un exemplaire du sujet.</td><td style="text-align: center">x1</td></tr>
+<tr><td style="text-align: center">Recensé</td><td>Lorsque l'on souhaite disposer de plusieurs objets ou créatures identiques sans avoir à les payer tous, on applique un simple multiplicateur pour doubler le coût original. &quot;Recensé&quot; signifie que chaque exemplaire du sujet porte un nom propre ou peut être identifié par un numéro, le nombre qui en existe correspondant aux besoins du personnage et aux possibilités de sa création. Il est possible, par exemple, d'avoir quatre dagues (pour les manches, une botte et un étui de ceinture) ou encore sept nains, huit petits rennes (Cornet, Donner, Blitzen ... ). Cette option limite à une douzaine de spécimens environ. Coût double (x2) de la valeur originale du sujet.</td><td style="text-align: center">x2</td></tr>
+<tr><td style="text-align: center">Horde</td><td>On appelle ainsi un grand nombre d'exemplaires identiques, en général regroupés en un endroit précis. Ainsi, les Chiens d'Enfer de Julian infestent la forêt d' Arden. S'il n'a que peu de temps mais s'il se trouve au bon endroit, un personnage peut réunir jusqu'à cinquante et quelques membres de cette horde; en y mettant Je temps, il en rassemblera beaucoup plus. Leur nombre double au bout d'une heure, puis à nouveau après huit heures supplémentaires et encore au bout d'un jour. Ensuite, cette progression diminue très vite, à cause des contraintes de distance et de nombre. Une horde coûte trois fois plus que Je prix d'un exemplaire unique (x3).</td><td style="text-align: center">x3</td></tr>
+<tr><td style="text-align: center">Répandu en Ombre</td><td>Dans une Ombre précise, peu importe où vous êtes, vous trouverez une horde de ces sujets.</td><td style="text-align: center">x4</td></tr>
+<tr><td style="text-align: center">Environnement trans-Ombre</td><td>Le sujet est courant dans n'importe quelle Ombre qui contienne l'environnement décrit. Imaginons, par exemple, une créature des marécages tempérés, définie comme transOmbre; elle sera présente dans tous les marais tempérés, partout à travers Ombre. Il faut cependant qu'elle ait une forme naturelle; ainsi, si elle est construite à partir d'un alligator, elle doit pouvoir se confondre avec les alligators de chaque Ombre. S'il s'agit d'une épée, on en trouvera des spécimens dans toutes les armureries d'importance moyenne de quelque Ombre que ce soit. Dans un endroit précis, on pourra recenser les exemplaires du sujet, qui sera peut-être même Unique.</td><td style="text-align: center">x5</td></tr>
+<tr><td style="text-align: center">Omniprésent en Ombre</td><td>Ils sont partout ! N'importe où à travers Ombre, il y a des spécimens identiques n'attendant que d'être trouvés. Les seules exceptions à leur ubiquité résident dans les deux pôles de réalité, Ambre et les Cours du Chaos. En dehors de ces endroits, on déniche un exemplaire du sujet en quelques minutes. Comme dans le cas des objets transOmbre, celui-ci doit paraître normal et courant.</td><td style="text-align: center">x6</td></tr>
+</tbody></table>
+</div>
+<div class="footnote-definition" id="1 "><sup class="footnote-definition-label">1</sup>
+<p>Un objet aura plutôt un score situé dans la fourchette base</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="08_08_conjuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="10_ombres_et_mulivers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="08_08_conjuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="10_ombres_et_mulivers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

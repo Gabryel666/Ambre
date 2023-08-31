@@ -1,7 +1,8 @@
 @echo off
 
 :: Mettre à jour le sous-dossier src en fonction de C:\Base\test\
-::robocopy "C:\Base\test" "C:\Ambre\src" /MIR
+robocopy "D:\Drive\DharmaLink" "C:\Sites\Ambre\src" /MIR
+::xcopy "D:\Drive\Anthony\Jeux de rôle\Ambre\Ambre Dharma" "C:\Ambre\src" /E /C /I /Q /H /R /K /Y
 
 :: Demander à l'utilisateur de saisir le message de commit
 set /p commit_message=Entrez le message de commit : 
