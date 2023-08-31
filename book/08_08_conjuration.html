@@ -1,0 +1,959 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>La Conjuration</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="00_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Règles</li><li class="chapter-item expanded "><a href="01_le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="02_creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li><li class="chapter-item expanded "><a href="03_les_tests.html"><strong aria-hidden="true">3.</strong> Les tests</a></li><li class="chapter-item expanded "><a href="04_le_karma.html"><strong aria-hidden="true">4.</strong> Le Karma</a></li><li class="chapter-item expanded "><a href="05_le_combat.html"><strong aria-hidden="true">5.</strong> Le combat</a></li><li class="chapter-item expanded "><a href="06_la_sante.html"><strong aria-hidden="true">6.</strong> La santé</a></li><li class="chapter-item expanded "><a href="07_equipement.html"><strong aria-hidden="true">7.</strong> L'équipement</a></li><li class="chapter-item expanded "><a href="08_00_pouvoirs.html"><strong aria-hidden="true">8.</strong> Pouvoirs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="08_01_la_marelle.html"><strong aria-hidden="true">8.1.</strong> La Marelle</a></li><li class="chapter-item expanded "><a href="08_02_le_logrus.html"><strong aria-hidden="true">8.2.</strong> Le Logrus</a></li><li class="chapter-item expanded "><a href="08_03_abysse.html"><strong aria-hidden="true">8.3.</strong> L'Abysse</a></li><li class="chapter-item expanded "><a href="08_04_art_des_atouts.html"><strong aria-hidden="true">8.4.</strong> L'Art des Atouts</a></li><li class="chapter-item expanded "><a href="08_05_metamorphose.html"><strong aria-hidden="true">8.5.</strong> Métamorphose</a></li><li class="chapter-item expanded "><a href="08_06_investiture.html"><strong aria-hidden="true">8.6.</strong> Investiture</a></li><li class="chapter-item expanded "><a href="08_07_sorcellerie.html"><strong aria-hidden="true">8.7.</strong> La Sorcellerie</a></li><li class="chapter-item expanded "><a href="08_08_conjuration.html" class="active"><strong aria-hidden="true">8.8.</strong> La Conjuration</a></li></ol></li><li class="chapter-item expanded "><a href="09_artefacts.html"><strong aria-hidden="true">9.</strong> Artefacts</a></li><li class="chapter-item expanded "><a href="10_ombres_et_mulivers.html"><strong aria-hidden="true">10.</strong> Ombres et multivers</a></li><li class="chapter-item expanded "><a href="11_contacts_et_allies.html"><strong aria-hidden="true">11.</strong> Contacts et alliés</a></li><li class="chapter-item expanded "><a href="12_les_figurants.html"><strong aria-hidden="true">12.</strong> Les figurants</a></li><li class="chapter-item expanded affix "><li class="part-title">Campagne</li><li class="chapter-item expanded "><a href="13_les_acteurs.html"><strong aria-hidden="true">13.</strong> Les acteurs</a></li><li class="chapter-item expanded "><a href="14_lieux_remarquables.html"><strong aria-hidden="true">14.</strong> Lieux remarquables</a></li><li class="chapter-item expanded affix "><li class="part-title">Annexes</li><li class="chapter-item expanded "><a href="15_fiche_de_personnage.html"><strong aria-hidden="true">15.</strong> Fiche de personnage</a></li><li class="chapter-item expanded "><a href="16_carnet_de_personnage.html"><strong aria-hidden="true">16.</strong> Carnet de personnage</a></li><li class="chapter-item expanded "><a href="17_foundryvtt.html"><strong aria-hidden="true">17.</strong> Foundry VTT</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>[TOC]</p>
+<h1 id="conjuration"><a class="header" href="#conjuration">Conjuration</a></h1>
+<p><em>Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire Citation à faire.</em></p>
+<p>Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire Introduction à faire.</p>
+<h2 id="conjuration-1"><a class="header" href="#conjuration-1">Conjuration</a></h2>
+<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: right">Pouvoirs</th><th style="text-align: center">Coût</th><th style="text-align: center">Titre</th><th style="text-align: center">Conditions</th><th style="text-align: center">Apprentissage</th><th style="text-align: center">Enseignement</th></tr></thead><tbody>
+<tr><td style="text-align: right">Conjuration de base</td><td style="text-align: center">20</td><td style="text-align: center">Conjurateur</td><td style="text-align: center">-</td><td style="text-align: center">Mentor</td><td style="text-align: center">Oui</td></tr>
+</tbody></table>
+</div>
+<h4 id="conjuration-de-base-20-points"><a class="header" href="#conjuration-de-base-20-points">Conjuration de base (20 points)</a></h4>
+<p>Contient :</p>
+<ul>
+<li><strong>Conjuration d'une forme d'Ombre</strong> : Conjuration d'une forme d'Ombre : Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire .</li>
+<li><strong>Enchantement</strong> : Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire .</li>
+<li><strong>Conjuration complexe :</strong> Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire Description à faire .</li>
+</ul>
+<h2 id="conjuration-avancée"><a class="header" href="#conjuration-avancée">Conjuration avancée</a></h2>
+<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Domaine</th><th style="text-align: right">Pouvoirs</th><th style="text-align: center">Coût</th><th style="text-align: center">Titre</th><th style="text-align: center">Conditions</th></tr></thead><tbody>
+<tr><td style="text-align: center">Forge</td><td style="text-align: right">Conjuration avancée</td><td style="text-align: center">10</td><td style="text-align: center">Faiseur (Initié)</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Forge</td><td style="text-align: right">Epitomé</td><td style="text-align: center">10</td><td style="text-align: center">Faiseur (Initié)</td><td style="text-align: center">Conjuration avancée</td></tr>
+<tr><td style="text-align: center">Forge</td><td style="text-align: right">Evocation</td><td style="text-align: center">15</td><td style="text-align: center">Faiseur (Initié)</td><td style="text-align: center">Conjuration avancée</td></tr>
+<tr><td style="text-align: center">Géomancie</td><td style="text-align: right">Infusion</td><td style="text-align: center">10</td><td style="text-align: center">Géomancien</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Géomancie</td><td style="text-align: right">Fabriaux</td><td style="text-align: center">10</td><td style="text-align: center">Géomancien</td><td style="text-align: center">Infusion</td></tr>
+<tr><td style="text-align: center">Géomancie</td><td style="text-align: right">Fabriaux avancés</td><td style="text-align: center">15</td><td style="text-align: center">Géomancien</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arts Métalliques</td><td style="text-align: right">Allomancie</td><td style="text-align: center">10</td><td style="text-align: center">Varié</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arts Métalliques</td><td style="text-align: right">Ferochimie</td><td style="text-align: center">10</td><td style="text-align: center">Varié</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arts Métalliques</td><td style="text-align: right">Décuplage</td><td style="text-align: center">15</td><td style="text-align: center">Varié</td><td style="text-align: center">Allomancie, Ferochimie</td></tr>
+</tbody></table>
+</div>
+<h4 id="conjuration-avancée-10-points"><a class="header" href="#conjuration-avancée-10-points">Conjuration avancée (10 points)</a></h4>
+<p>Réduit le temps d'invocation des objets magiques, permet d'utiliser les transferts de qualités et de pouvoirs ainsi que la multiplication.</p>
+<h4 id="epitomé-10-points"><a class="header" href="#epitomé-10-points">Epitomé (10 points)</a></h4>
+<p>Permet d'analyser un objet magique et de le rénover (les siens et les autres)</p>
+<h4 id="evocation-15-points"><a class="header" href="#evocation-15-points">Evocation (15 points)</a></h4>
+<p>Permet d'accéder à des formes spécialisée de conjuration liées à d'autres pouvoirs.</p>
+<ul>
+<li>Evocation du Sang : Métamorphose</li>
+<li>Evocation d'Atout : Atouts</li>
+</ul>
+<h4 id="infusion-10-points"><a class="header" href="#infusion-10-points">Infusion (10 points)</a></h4>
+<p>Le pouvoir d'infusion permet d'infuser les gemmes avec des Sprens. L'énergie ainsi contenu dans la gemme permet, une fois associé à un artefact d'hériter de plusieurs caractéristiques. Les artefacts conscients ont tendance à prendre comme personnalité les attributs liés à la gemme alors que les artefacts inertes acquièrent des stigmates liés à ses associations.</p>
+<p>Les gemmes sont catégorisées selon les deux tableaux ci-dessous.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Essence</th><th style="text-align: center">Gemmes</th><th style="text-align: center">Associations</th><th style="text-align: center">Attributs</th></tr></thead><tbody>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Jeseh_glyph.svg" alt="Coursevent" style="zoom:10%;" /></td><td style="text-align: center">Saphir</td><td style="text-align: center">Gaz translucide, air, bleu</td><td style="text-align: center">Protection, guide</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Skybreakers_glyph.svg" alt="Skybreakers" style="zoom:10%;" /></td><td style="text-align: center">Quartz</td><td style="text-align: center">Gaz opaque, brume, fumée</td><td style="text-align: center">Justice, confidence</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Dustbringers_glyph.svg" alt="Dustbringers" style="zoom:10%;" /></td><td style="text-align: center">Rubis</td><td style="text-align: center">Feu, chaleur, rouge</td><td style="text-align: center">Bravoure, obéissance</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Edgedancers_glyph.svg" alt="Edgedancers" style="zoom:10%;" /></td><td style="text-align: center">Diamant</td><td style="text-align: center">Quartz, verre, cristal</td><td style="text-align: center">Amour, santé</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Truthwatchers_glyph.svg" alt="Truthwatchers" style="zoom:10%;" /></td><td style="text-align: center">Emeraude</td><td style="text-align: center">Bois, plante, mousse</td><td style="text-align: center">Apprentissage, don</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Shash_glyph.svg" alt="Lightweavers" style="zoom:10%;" /></td><td style="text-align: center">Grenat</td><td style="text-align: center">Sang, liquide non huileux</td><td style="text-align: center">Création, honnêteté</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Beteb_glyph.svg" alt="Elsecallers" style="zoom:10%;" /></td><td style="text-align: center">Zircon</td><td style="text-align: center">Liquides huileux</td><td style="text-align: center">Sagesse, prudence</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Willshapers_glyph.svg" alt="Willshapers" style="zoom:10%;" /></td><td style="text-align: center">Améthyste</td><td style="text-align: center">Métaux</td><td style="text-align: center">Résolution, construction</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Stonewards_glyph.svg" alt="Stonewards" style="zoom:10%;" /></td><td style="text-align: center">Topaze</td><td style="text-align: center">Minéraux</td><td style="text-align: center">Fiable, ingénieux</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Ishi_glyph.svg" alt="Bondsmiths" style="zoom:10%;" /></td><td style="text-align: center">Héliodore</td><td style="text-align: center">Chair, os</td><td style="text-align: center">Pieux, guide</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Type de gemme</th><th style="text-align: center">Quantité de Sprens maximum</th><th>Note</th></tr></thead><tbody>
+<tr><td style="text-align: center">Eclat</td><td style="text-align: center">1 à 5</td><td>-1 spren par semaine</td></tr>
+<tr><td style="text-align: center">Petite</td><td style="text-align: center">6 à 10</td><td>-1 spren par semaine</td></tr>
+<tr><td style="text-align: center">Moyenne</td><td style="text-align: center">11 à 20</td><td>-1 spren par mois</td></tr>
+<tr><td style="text-align: center">Grosse</td><td style="text-align: center">21 à 30</td><td>-1 spren par mois</td></tr>
+<tr><td style="text-align: center">Joyau</td><td style="text-align: center">31 à 50</td><td>-1 spren par an</td></tr>
+<tr><td style="text-align: center">Cœur-gemme</td><td style="text-align: center">51 et +</td><td>Pas de perte</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Qualité unique : Objet réel</strong></p>
+<p><em>Coût de construction : +2</em></p>
+<p>Un artefact muni d'une gemme chargée quel quelle soit acquière une réalité dans tout le multivers. En fonction de la charge contenu elle subit moins voir aucune dégradation liés aux voyages en Ombre.</p>
+<div class="table-wrapper"><table><thead><tr><th>Quantité de Sprens</th><th>Réalité</th></tr></thead><tbody>
+<tr><td>de 0 à 10</td><td>Changements physiques ou mentaux, dégradations mineures des capacités.</td></tr>
+<tr><td>de 11 à 20</td><td>Changement physique ou mentaux mineurs, pas de dégradations.</td></tr>
+<tr><td>Au delà de 20</td><td>Aucun changement.</td></tr>
+</tbody></table>
+</div></li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Qualité unique : Gemme pure</strong></p>
+<p><em>Condition : Trouver une gemme pure</em></p>
+<p>Un artefact muni d'une gemme pure voit toute perte de Sprens annulée au fil du temps. Associations et stigmates se manifestent de manière plus prononcés.</p>
+</li>
+</ul>
+<h4 id="fabriaux-10-points"><a class="header" href="#fabriaux-10-points">Fabriaux (10 points)</a></h4>
+<p>Lorsqu'une pierre est infusé de Sprens et couplé avec un artefact il devient un Fabrial.
+Il hérite des deux principes liés à sa pierre.
+Ces capacités particulières sont intrinsèquement liés à lui et sont très difficile à contrer.
+N'étant pas une manipulation de l'Essence comme un sort, la Sorcellerie est relativement inefficace de manière directe.
+Le seul point faible des Fabriaux est la quantité d'énergie à disposition dans la gemme qui pourrait avoir besoin d'être rechargée.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Essence</th><th style="text-align: center">Gemmes</th><th style="text-align: center">Principe primaire</th><th style="text-align: center">Principe secondaire</th></tr></thead><tbody>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Jeseh_glyph.svg" alt="Coursevent" style="zoom:10%;" /></td><td style="text-align: center">Saphir</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Adhesion_Surge-glyph.svg" alt="Adhesion" style="zoom:10%;" /> Adhésion</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Gravitation_Surge-glyph.svg" alt="Gravitation" style="zoom:10%;" />Gravitation</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Skybreakers_glyph.svg" alt="Skybreakers" style="zoom:10%;" /></td><td style="text-align: center">Quartz</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Gravitation_Surge-glyph.svg" alt="Gravitation" style="zoom:10%;" />Gravitation</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Division_Surge-glyph.svg" alt="Division" style="zoom:10%;" />Division</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Dustbringers_glyph.svg" alt="Dustbringers" style="zoom:10%;" /></td><td style="text-align: center">Rubis</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Division_Surge-glyph.svg" alt="Division" style="zoom:10%;" />Division</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Abrasion_Surge-glyph.svg" alt="Abrasion" style="zoom:10%;" />Abrasion</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Edgedancers_glyph.svg" alt="Edgedancers" style="zoom:10%;" /></td><td style="text-align: center">Diamant</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Abrasion_Surge-glyph.svg" alt="Abrasion" style="zoom:10%;" />    Abrasion</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Progression_Surge-glyph.svg" alt="Progression" style="zoom:10%;" /> Progression</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Truthwatchers_glyph.svg" alt="Truthwatchers" style="zoom:10%;" /></td><td style="text-align: center">Emeraude</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Progression_Surge-glyph.svg" alt="Progression" style="zoom:10%;" /> Progression</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Illumination_Surge-glyph.svg" alt="Illumination" style="zoom:10%;" />Illumination</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Shash_glyph.svg" alt="Lightweavers" style="zoom:10%;" /></td><td style="text-align: center">Grenat</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Illumination_Surge-glyph.svg" alt="Illumination" style="zoom:10%;" />Illumination</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Transformation_Surge-glyph.svg" alt="Transformation" style="zoom:10%;" /> Transformation</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Beteb_glyph.svg" alt="Elsecallers" style="zoom:10%;" /></td><td style="text-align: center">Zircon</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Transformation_Surge-glyph.svg" alt="Transformation" style="zoom:10%;" /> Transformation</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Transportation_Surge-glyph.svg" alt="Transportation" style="zoom:10%;" /> Transportation</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Willshapers_glyph.svg" alt="Willshapers" style="zoom:10%;" /></td><td style="text-align: center">Améthyste</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Transportation_Surge-glyph.svg" alt="Transportation" style="zoom:10%;" /> Transportation</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Cohesion_Surge-glyph.svg" alt="Cohesion" style="zoom:10%;" /> Cohésion</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Stonewards_glyph.svg" alt="Stonewards" style="zoom:10%;" /></td><td style="text-align: center">Topaze</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Cohesion_Surge-glyph.svg" alt="Cohesion" style="zoom:10%;" /> Cohésion</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Tension_Surge-glyph.svg" alt="Tension" style="zoom:10%;" /> Tension</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Ishi_glyph.svg" alt="Bondsmiths" style="zoom:10%;" /></td><td style="text-align: center">Héliodore</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Tension_Surge-glyph.svg" alt="Tension" style="zoom:10%;" /> Tension</td><td style="text-align: center"><img src="https://coppermind.net/w/images/Adhesion_Surge-glyph.svg" alt="Adhesion" style="zoom:10%;" /> Adhésion</td></tr>
+</tbody></table>
+</div>
+<h5 id="principe-dadhésion"><a class="header" href="#principe-dadhésion">Principe d'adhésion</a></h5>
+<p>Le principe d'adhésion peut être manipulé pour lier les choses ensemble. </p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Adhésion Physique</strong> </p>
+<p><em>Gemmes : Saphir, héliodore | Coût de construction : 2</em> | <em>Dépense en Sprens : 0</em></p>
+<p>Un Fabrial doté de cette capacité est capable d'adhérer physiquement à un objet ou un à quelqu'un avec une Force équivalente au niveau de Spren dans la gemme. Nulle magie autre que la force physique ne serait défaire ce lien tant que le niveau de Force du Fabrial n'est pas dépassé d'une quelconque manière.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Projection Adhésive</strong></p>
+<p><em>Gemmes : Saphir, héliodore | Coût de construction : 2</em> | <em>Dépense en Sprens : 2</em></p>
+<p>Selon le même principe que adhésion physique, le Fabrial peut projeter une partie de sa réserve sur un objet qui acquière une Force d'adhésion équivalente à la réserve de Sprens restante.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p>**Adhésion spirituelle **</p>
+<p><em>Gemmes : Saphir, héliodore | Coût de construction : 3</em> | <em>Dépense en Sprens : variable</em></p>
+<p>Cette capacité permet à l'aide d'un contact physique du Fabrial avec une cible vivante de créer une connexion soudaine avec son esprit. Bien que cette connexion peut être résistée d'esprit à esprit, la nature étrange des sprens rend la résistance ardue.  La connexion s'estompe au bout de quelques jours naturellement. Durant le temps de cette dernière, une proximité se créé entre le Fabrial et la cible. Les connexions psychiques sont facilitées (+4), les sujets partage naturellement la même langue maternelle, le lien entre la cible et le Fabrial devient intuitif. Etablir des serments sous un tel lien touche particulièrement les participants même après la fin du lien. On considère le Pouvoir (POU) de l'attaque mentale est égale au nombre de sprens contenus dans la gemme + 2 par Spren dépensé.</p>
+</li>
+</ul>
+<h5 id="principe-de-gravitation"><a class="header" href="#principe-de-gravitation">Principe de gravitation</a></h5>
+<p>Le Principe de gravitation peut être manipulé pour changer la direction et la force de l'attraction gravitationnelle d'un objet.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Arrimage</strong></p>
+<p><em>Gemmes : Saphir, quartz | Coût de construction : 2</em> | <em>Dépense en Sprens : variable</em></p>
+<p>Cette capacité modifie le lien gravitationnel d'un objet ou d'un être avec la planète (ou autre) sur laquelle il se trouve, le liant temporairement à une direction différente. Cela n'affecte que l'attraction gravitationnelle et non la masse, de sorte que différentes choses avec des masses différentes tomberont toujours à la même vitesse.  Pour affecter autre chose que lui-même un contact physique doit être établi avec la cible. La Force (FOR) de la capacité est égale au nombre de sprens contenus dans la gemme + 2 par Spren dépensé.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Arrimage inversé</strong></p>
+<p><em>Gemmes : Saphir, quartz | Coût de construction : 2</em> | <em>Dépense en Sprens : variable</em></p>
+<p>En utilisant arrimage inversé, l'artefact peut augmenter l'attraction gravitationnelle de lui-même, permettant au Fabrial d'attirer les objets proches vers lui. La Force (FOR) de la capacité est égale au nombre de sprens contenus dans la gemme + 2 par Spren dépensé.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Projection gravitationnelle</strong></p>
+<p><em>Gemmes : Saphir, quartz | Coût de construction : 2</em> | <em>Dépense en Sprens : variable</em></p>
+<p>Permet d'utiliser un arrimage inversé mais vers un point à portée de vue. Les objets seront attirés vers le point tant que la capacité est maintenue. La Force (FOR) de la capacité est égale au nombre de sprens contenus dans la gemme + 2 par Spren dépensé.</p>
+</li>
+</ul>
+<h5 id="principe-de-division"><a class="header" href="#principe-de-division">Principe de division</a></h5>
+<p>Le Principe de division peut être manipulé pour détruire et décomposer.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Destructuration</strong></p>
+<p><em>Gemmes : Quartz, rubis | Coût de construction : 3</em> | <em>Dépense en Sprens : 1 (Dégâts + 4 à + 6), 2 (Dégâts + 7 à + 9), 4 (Dégâts + 10 à +12)</em></p>
+<p>Ce pouvoir divise les liaisons moléculaires de l'objet sur lequel le Principe est utilisé, mais pas les atomes eux-mêmes. Redoutable contre les objets inanimés il a l'avantage d'outrepasser complétement les simples objets conjurés autre que les Fabriaux. Ainsi, à partir du moment ou une telle attaque égalise une protection, la cible sera considérée comme un objet &quot;normal&quot; et subira les dégâts. Par exemple : une armure conjuré doté d'invulnérabilité (4) sera considéré comme une simple armure à partir du moment ou 4 Sprens ont été dépensés. Notons tout de même que d'autres paramètres liés à l'objet conjuré peuvent rendre le pouvoir moins efficace. Les artefacts liés ne sont pas concernés par ce dépassement, même si une utilisation à répétition du pouvoir sur eux les déstabiliseront au moins temporairement.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Décomposition</strong></p>
+<p><em>Gemmes : Quartz, rubis | Coût de construction : 3</em> | <em>Dépense en Sprens : 1 (Dégâts + 4 à + 6), 2 (Dégâts + 7 à + 9), 4 (Dégâts + 10 à +12)</em></p>
+<p>Ce pouvoir divise les liaisons moléculaires de la cible sur lequel le Principe est utilisé, mais pas les atomes eux-mêmes. Redoutable contre les objets vivants. Il a l'avantage d'outrepasser complétement les simple objets conjurés autre que les Fabriaux. Ainsi une armure conjuré même invulnérable sera traitée comme une simple armure, même si d'autres paramètres liés à l'objet conjuré peuvent rendre le pouvoir moins efficace. Les artefacts ne sont pas concernés par ce dépassement.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Gravure</strong></p>
+<p><em>Gemmes : Quartz, rubis | Coût de construction : 2</em> | <em>Dépense en Sprens : x</em></p>
+<p>En utilisant le Surge of Division, le Surgebinder peut toucher un objet et le faire brûler, se transformer en poussière ou se décomposer d'une autre manière. Le Surgebinder peut exercer un contrôle important, comme graver un motif dans un morceau de bois. Il peut également être utilisé sur les humains. [69] Cela divise les liaisons moléculaires de l'objet sur lequel le Surge est utilisé, mais pas les atomes eux-mêmes. [70] Il est susceptible d'avoir la capacité d'enflammer des objets. [71] La décomposition peut être utilisée pour créer des types de sculptures, telles que l'ajout de couleur lors de la gravure d'objets ou leur mise en niveaux de gris. [72]</p>
+</li>
+</ul>
+<h5 id="principe-dabrasion"><a class="header" href="#principe-dabrasion">Principe d'abrasion</a></h5>
+<p>Le Surge of Abrasion peut être manipulé pour modifier la force de frottement entre deux surfaces. [45] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Dustbringers et les Edgedancers. La marque de Fused with access sont les shetel-im , ou Flowing Ones.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Afriction</strong></p>
+<p><em>Gemmes : Quartz, rubis | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Slicking : Cette capacité permet au Surgebinder de rendre son corps sans friction. Le Surgebinder peut choisir quelles parties du corps sont affectées et quelles parties ne le sont pas ; par exemple, le bas des pieds peut être infusé de sorte que le Surgebinder glisse sur n'importe quelle surface sans perdre d'élan jusqu'à ce que la capacité soit suspendue. [73] Le frottement du vent peut également être affecté. Cependant, le lissage ne réduit pas la force des collisions directes. [74] Les personnes expérimentées dans son utilisation se déplacent souvent comme si elles faisaient du patin à glace sur le sol. [75] Le lissage peut également être utilisé pour échapper à toute prise ou se glisser à travers des ouvertures étroites. [75] [76]Il peut également être appliqué à des objets, ce qui fait que seul le Surgebinder peut saisir l'objet sans qu'il glisse. [75] Dead Shardplate interférerait avec cela. [77] L'abrasion leur donne la capacité de manipuler la friction. [2] Ils peuvent appliquer cela de différentes manières. En combat rapproché, cette capacité peut les rendre difficiles à arrêter ou à saisir. Lorsqu'ils sont utilisés pour réduire la friction du vent et la friction sur les pieds, ils peuvent parcourir de longues distances à des vitesses considérables, bien que garder l'équilibre sans friction nécessite beaucoup de pratique. Ils ont été décrits, poétiquement, comme étant capables &quot;de chevaucher la corde la plus fine à grande vitesse, de danser sur les toits et de se déplacer sur un champ de bataille comme un ruban dans le vent&quot;. [4]</p>
+</li>
+</ul>
+<h5 id="principe-de-progression"><a class="header" href="#principe-de-progression">Principe de progression</a></h5>
+<p>Le Surge of Progression peut être manipulé pour modifier la croissance et la guérison des organismes. [45] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Edgedancers et les Truthwatchers. La marque de Fused with access sont les Magnified Ones .</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Croissance</strong></p>
+<p><em>Gemmes : Diamant, Emeraude | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Croissance : Cette capacité accélère la croissance organique à des vitesses énormes. Le Surgebinder peut infuser les graines d'une plante avec Stormlight par contact avec la peau, et en quelques secondes, il deviendra complètement développé. On ne sait pas si cette capacité ne fonctionne que sur les plantes. [73] Les Fusionnés ayant accès à ce Surge peuvent l'utiliser pour transformer leur carapace en outils et en armes.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Repousse</strong></p>
+<p><em>Gemmes : Diamant, Emeraude | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Cette capacité guérit les dommages causés au corps et à l'âme d'une personne instantanément et sans aucune cicatrice. La chair, les muscles ou les os peuvent être complètement repoussés rapidement. Le corps peut être rafraîchi et débarrassé de la fatigue. [78] Le Surgebinder peut même inverser la mort avec Regrowth; un corps qui a saigné ou une âme qui a été coupée avec un Shardblade peut être soigné avec Regrowth et continuer à fonctionner comme s'il n'avait jamais été endommagé. [73] Cependant, une fois que l'âme quitte le corps et atteint l'au-delà, il est impossible pour le Surgebinder de faire revivre la personne. [79] Cette capacité peut également échouer à guérir des blessures trop anciennes. [80] La repousse est inférieure à la guérison Radiant normale. [81]</p>
+</li>
+</ul>
+<h5 id="principe-dillumination"><a class="header" href="#principe-dillumination">Principe d'illumination</a></h5>
+<p>Le Surge of Illumination peut être manipulé pour créer des illusions auditives et visuelles. [45] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Lightweavers et les Truthwatchers. La marque de Fused with access sont les mavset-im , ou Masked Ones.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Illusions</strong></p>
+<p><em>Gemmes : Emeraude, Grenat | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Lightweaving : Cette capacité crée des illusions visuelles et auditives. L'illusion est basée non seulement sur ce que le Surgebinder imagine, mais aussi sur le désir de créer, nécessitant à la fois une image mentale et une connexion spirituelle avec la création prévue. [45] Une fois la création façonnée, le Surgebinder exhale un nuage de Stormlight pour former l'illusion. [82]L'illusion peut être créée n'importe où, mais nécessite une source constante de Stormlight, de sorte que le Surgebinder - ou un être auquel le Surgebinder est spirituellement lié - doit rester à proximité. Parce que l'illusion se nourrit automatiquement du Surgebinder, l'effet lumineux commun aux Surgebinders lorsque le Stormlight s'échappe de leur corps ne se produit pas, car l'excès de Stormlight est plutôt alimenté par l'illusion. À moins que le Surgebinder ne dissolve intentionnellement l'apparition, il restera actif jusqu'à ce qu'il soit à court de Stormlight ou quitte sa proximité. Il peut même rester actif pendant que le Surgebinder est inconscient. [83] Il est possible pour le Surgebinder d'attacher l'illusion à lui-même, ainsi qu'à un être auquel il est spirituellement lié, comme le spren qui forme leNahel bond , pour que l'illusion suive automatiquement leurs mouvements. De cette façon, une illusion de déguisement peut imiter les expressions faciales ou s'adapter aux vêtements ou aux accessoires qu'ils portent. [84] Les praticiens expérimentés de cet art peuvent également attacher l'illusion à un objet qui est imprégné de Stormlight, comme une sphère . [85] L'image illusoire n'a aucune substance, et si un objet passe physiquement à travers l'illusion, l'image se transforme en Stormlight jusqu'à ce que l'objet se retire. [86] La lumière elle-même ne passe pas par l'illusion ; si le Surgebinder veut voir à travers, il doit mettre des trous de visualisation. La quantité de Stormlight requise par l'illusion dépend de sa complexité. [87]Le tissage de lumière peut manipuler toutes les formes de rayonnement électromagnétique, y compris les lasers. [88] Lightweaving serait affecté par l'aphantasia. [89]
+Interactions avec Yolish Lightweaving : Rosharan Lightweaving est beaucoup plus restrictif que la variante Yolish précédente , [90] car il nécessite un spren et Stormlight pour fonctionner. [91] Yolish Lightweaver, cependant, semble fonctionner imparfaitement de nos jours, [92] et ses utilisateurs peuvent avoir besoin de l'aide de Rosharan Lightweavers pour créer pleinement une illusion. [93] Un Yolish Lightweaver est capable de guider le pouvoir d'un Rosharan Lightweaver. [92] Gagner Rosharan Lightweaving permet une capacité supplémentaire avec Yolish Lightweaving, [94] et pourrait permettre aux Yolish Lightweavers de surmonter leurs difficultés, bien que d'autres impacts ou résonancesentre les deux sont inconnus. [95] [94] L'illumination est utilisée pour créer des illusions en tissant la lumière, le son et diverses formes d'onde. [9] Cela peut être utilisé pour changer leur apparence pour des déguisements ou à d'autres fins, créer des illusions de murs et de rochers pour se cacher derrière et à l'intérieur, et pour créer des illusions pour confondre ou distraire. Chaque Lightweaver a besoin d'une certaine concentration pour faire fonctionner Lightweaving, comme des dessins ou des peintures. [10] Il est également sous-entendu qu'ils peuvent être capables de créer une illusion solide en combinant leur montée subite d'illumination et leur Soulcasting. [11] [12] Il y a quelques différences dans la façon dont ils utilisent le Surge par rapport aux Vérités . [13]</p>
+</li>
+</ul>
+<h5 id="principe-de-transformation"><a class="header" href="#principe-de-transformation">Principe de transformation</a></h5>
+<p>L'Afflux de Transformation peut être manipulé pour transformer un objet en l'une des dix essences. [45] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Elsecallers et les Lightweavers. La marque de Fused with access sont les fannahn-im , ou Altered Ones. En utilisant cette Surge, les Surgebinders peuvent entrer dans le royaume cognitif, mais sont incapables d'amener d'autres personnes avec eux ou de revenir par eux-mêmes. [96] La Surtension de Transformation peut potentiellement permettre à quelqu'un de défaire un spren , bien que d'autres capacités puissent être impliquées dans cela. [97]</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Transmutation</strong></p>
+<p><em>Gemmes : Grenat, Zircon | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Soulcasting : Cette capacité transforme n'importe quel matériau en l'un des choix du Surgebinder. Pour Soulcast , le Surgebinder déplace sa perception pour voir dans le domaine cognitif et communique avec l'aspect cognitif de l'objet qu'il souhaite transformer. Cela se fait normalement par contact direct avec un objet, cependant, cela peut être effectué à distance. Les Elsecallers sont plus habiles à le faire, bien qu'il ne soit pas impossible pour un Lightweaver de pouvoir lancer des âmes de loin. [98] Tous les objets ne sont pas enclins à changer, selon la façon dont l'objet est vu par l'espèce sensible et comment il se voit, de sorte que le Surgebinder peut avoir besoin de négocier avec lui. [99]Une fois que l'objet est convaincu de changer, le Surgebinder l'infuse avec Stormlight et le processus de transformation se déroule instantanément. [82] Il est techniquement possible pour le Surgebinder de transformer n'importe quoi en n'importe quoi d'autre, mais transformer quelque chose en la forme pure d'une Essence est le plus facile à accomplir, tandis que transformer l'objet en quelque chose d'inconnu est beaucoup plus difficile. [100] Il est possible de transférer un Soulcasting d'un matériau à un autre, comme une maladie, sans que le Soulcaster ne le fasse directement. [101]On ne sait pas si les objets peuvent transférer un Soulcasting dans un matériau différent de celui dans lequel ils se sont transformés ou s'ils ne peuvent transférer un Soulcasting que sur le même type d'objet qu'eux. La cible de Soulcasting peut être à la fois un objet inanimé et une personne, bien qu'une personne présentera une plus grande difficulté, en raison de l' investiture innée qu'elle détient. [102] [103] Soulcasting est beaucoup plus facile à faire dans le domaine cognitif. [104]Surge Fabrial: Un soulcaster fabrial est capable d'imiter la capacité Radiant de Soulcasting. [100] La plupart ne sont capables d'effectuer que de petits changements singuliers, comme transformer la pierre en eau, tandis qu'environ un sur dix peut affecter n'importe quel changement. [105] Lors du Soulcasting, le fabrial tire Stormlight de la pierre précieuse correspondante.
+Savantisme : L'utilisation à long terme de Soulcasting, que ce soit via Surgebinding ou un fabrial, peut conduire l'utilisateur à devenir un savant , se transformant lentement en l'essence en laquelle il transforme fréquemment d'autres objets. [106] Les effets de la savantité sont beaucoup moins prononcés pour les Surgebinders que pour les utilisateurs de fabrial, et peuvent emprunter un chemin différent dans leur manifestation, en raison du lien Nahel . [107] Ce processus est différent du simple fait d'avoir transformé accidentellement une partie de soi-même. [108]</p>
+</li>
+</ul>
+<h5 id="principe-de-transportation"><a class="header" href="#principe-de-transportation">Principe de transportation</a></h5>
+<p>La montée subite du transport peut être manipulée pour réaliser une transition réaliste. [45] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Elsecallers et les Willshapers. En utilisant cette capacité, les Surgebinders sont capables d'examiner brièvement le royaume cognitif , ce qui leur permet de voir les essences cachées des autres (par exemple, si un chanteur est un chanteur normal, Regal ou Fused). [29] La marque de Fused with access sont les nex-im , ou Husked Ones.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>elsescalling</strong></p>
+<p><em>Gemmes : Zircon, Améthyste | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Elsecalling : Cette capacité permet au Surgebinder de voyager entre les royaumes cognitif et physique en créant une perpendicularité miniature . [109] Un mur circulaire de Stormlight peut être vu brièvement à l'emplacement cible avant que le Surgebinder n'arrive. [110] Le Surgebinder peut également amener d'autres êtres et objets avec lui tout en se transportant. [111] Cela permet à de nombreux Surgebinders avec Transportation la possibilité de sauter dans le monde . [112]Cependant, il est beaucoup plus difficile de quitter le royaume cognitif que d'y entrer, et bien qu'il soit possible de faire la transition entre les royaumes sans waypoint, ceux qui sont moins qualifiés doivent trouver un point où les deux royaumes se touchent pour pouvoir partir. [113] [114] [115]
+Surge Fabrial: Oathgates est capable d'imiter la capacité Radiant de Transportation. Ils permettent à l'utilisateur de transporter n'importe quoi sur leur plate-forme et dans leur chambre de contrôle entre Oathgates en un instant. Cependant, pour autant que l'on sache, ils fonctionnent par paires - un Oathgate à Urithru ne se connecte qu'à un Oathgate à l'extérieur, et le Oathgate à l'extérieur ne se connecte qu'à un Oathgate à Urithiru. Ils ne peuvent être activés que par des Honourblades ou des Shardblades vivants . [116] Le transport de plus d'une personne à travers eux nécessite l'utilisation de plus de Stormlight. [17]
+Nex-im : Les Fusionnés qui ont cette capacité, comme Lezian , l'utilisent très différemment, évacuant leur corps dans une lumière rouge ressemblant à un spren avant de se reformer ailleurs. [117]</p>
+</li>
+</ul>
+<h5 id="principe-de-cohésion"><a class="header" href="#principe-de-cohésion">Principe de cohésion</a></h5>
+<p>Aussi appelé le Surge of Strong Axial Interconnection [45] , le Surge of Cohesion peut être manipulé pour modifier des objets au niveau moléculaire. [118] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Willshapers et les Stonewards. La marque de Fused with access sont les makay-im , ou Deepest Ones. Cela permet à l'utilisateur de modifier la forme d'objets solides, mais pas de chair humaine, avec des Surgebinders capables de saisir la matière et de l'étirer, modifiant l'objet comme s'il s'agissait d'argile molle. La cohésion est fortement résistée par Investiture , et même une petite quantité de Stormlight dans un objet l'empêcherait de fonctionner. [119]</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p>**Stoneshaping **</p>
+<p><em>Gemmes : Améthyste, Topaze | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Stoneshaping : Cette capacité manipule les forces qui lient axi ensemble. [120] Il est considéré comme un cousin de la microkinésie , un art investi de Yolen qui a également manipulé l'axi, bien que Honor ait imposé des limites strictes à Stoneshaping pour l'empêcher de permettre le niveau de destruction possible avec la microkinésie. Pendant son utilisation, un Surgebinder peut mouler la pierre (ou d'autres matériaux) comme s'il s'agissait d'argile sans utiliser de chaleur. [121] Stone est capable de sentir l'intention du Surgebinder et de son passé, et même de montrer ou d'expliquer des événements du passé via Stoneshaping. [30] [121] Bien que la pierre ait tendance à être la plus difficile à Soulcaster, elle obéira facilement à travers la Cohésion.</p>
+</li>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Makay-im</strong></p>
+<p><em>Gemmes : Améthyste, Topaze | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Makay-im : Les Fusionnés avec cette capacité, bien qu'ils ne soient pas capables de mouler la pierre, l'ont plutôt utilisée pour passer à travers la pierre. Ils peuvent se déplacer à travers d'autres matériaux, tant qu'ils sont solides. [122]</p>
+</li>
+</ul>
+<h5 id="principe-de-tension"><a class="header" href="#principe-de-tension">Principe de tension</a></h5>
+<p>Aussi appelé Surge of Soft Axial Interconnection, le Surge of Tension peut être manipulé pour modifier la rigidité d'un objet; [45] par exemple, prendre quelque chose de flexible et le rendre rigide. [123] Les deux ordres de Knights Radiant ayant accès à ce Surge sont les Stonewards et les Bondsmiths. Tout comme la cohésion, la tension est fortement résistée par l' investiture . [119]</p>
+<p>Pour les Bondsmiths, l'utilisation de ce surge est différente de celle des Stonewards , car ils peuvent le coupler à leur affinité pour la connexion pour réparer les objets inanimés en complément du Surge of Adhesion . [124]</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Tension</strong></p>
+<p><em>Gemmes : Topaze, Heliodore | Coût de construction : x</em> | <em>Dépense en spren : x</em></p>
+<p>Le Surge of Tension peut être manipulé par le Surgebinder pour modifier la rigidité d'un objet, rendant les matériaux flexibles rigides. [3] C'est un pouvoir qui n'a pas été beaucoup exploré et on ne sait pas dans quelle mesure ses applications sont pertinentes pour les Bondsmiths, bien qu'utilisé en conjonction avec d'autres capacités, il est partiellement responsable de la capacité Bondsmith à réparer des objets inanimés. [43]</p>
+</li>
+</ul>
+<p>Réparation d'objets inanimés
+Dans une expression quelque peu unique de leur pouvoir, un Bondsmith peut utiliser son contrôle à la fois sur ses Surges ainsi que son affinité unique pour la Connexion [43] pour réparer des objets inanimés. [58] Au cours de ce processus, ils peuvent sentir et entendre les aspects cognitifs de certains objets endommagés autour d'eux. [58]Avec une certaine combinaison d'efforts physiques, ainsi que ce pouvoir, ils peuvent réparer complètement les dégâts. Il a été suggéré que cette capacité peut avoir des restrictions à la guérison basée sur la progression dans laquelle il est plus facile de guérir ceux qui ont été récemment blessés, avant que l'âme ne s'habitue à la blessure. Bien que cette capacité puisse sembler de niche, elle est utile pour un Bondsmith souhaitant aider très directement à la réparation de villes endommagées au combat, permettant au Bondsmith de restaurer des œuvres d'art et des bâtiments historiques dans leur état antérieur.</p>
+<p>Synergie avec d'autres Radiants
+Un autre pouvoir unique aux Bondsmiths est leur capacité à travailler conjointement avec d'autres Radiants pour créer des effets qu'aucun des deux ne pourrait gérer de manière indépendante. Un Bondsmith a une interaction unique avec les Radiants de chaque ordre, [59] [60] et il se peut même que les spécificités de ces capacités conjointes varient entre chaque spren Bondsmith. Lorsqu'un pouvoir conjoint peut être utilisé, les deux Radiants ressentent une sensation de tiraillement ou de saut l'un vers l'autre. [61] Ces pouvoirs conjoints ne semblent être actifs que lorsque les Radiants sont physiquement ensemble, bien qu'il puisse y avoir un moyen de contourner cette exigence. [17]On ne sait pas d'où vient ce pouvoir, bien qu'il puisse s'agir de la Résonance des Bondsmiths. Une seule de ces synergies spécifiques est connue ; le Stormfather's Bondsmith peut travailler en tandem avec un Lightweaver pour créer une projection tridimensionnelle de Roshar telle qu'elle est apparue au Stormfather la dernière fois qu'une grande tempête a traversé le continent. [61] Cette carte se comporte comme n'importe quelle autre illusion créée par un Lightweaver, son apparence peut être modifiée ou agrandie. [60] [54] Il peut s'effondrer si le Radiant est distrait [54] ou si l'illusion est touchée, [61] bien qu'il traite différemment le fait de toucher le Bondsmith, tendant plutôt vers eux. [60]</p>
+<p>La tension leur permet de modifier la rigidité d'un objet. [11] [12] Les Stonewards sont capables de contrôler la dureté d'un objet, leur permettant de durcir les vêtements en armes, et ont la capacité de façonner la pierre à leur guise. [13] Tout comme la cohésion, la tension est fortement résistée par l' investiture . [dix]</p>
+<p><em><strong>Resonance</strong> : En raison d'une combinaison de leurs deux surtensions, les Windrunners ont de nouveaux effets secondaires, connus sous le nom de Résonance . [28] La résonance des Windrunners est la force des écuyers, [24] [25] ce qui leur permet d'avoir beaucoup plus d'écuyers que les autres ordres. Après que Kaladin ait prêté le troisième serment, de nombreux hommes de pont qui travaillaient sous ses ordres ont soudainement pu respirer Stormlight et se soigner. [29] Un écuyer peut effectuer ses propres flagellations, mais uniquement lorsque son Windrunner est à proximité. Les écuyers peuvent utiliser Stormlight efficacement à moins de trente miles de leur Windrunner, et leur distance maximale était de cinquante miles. Les écuyers perdront l'accès à leurs pouvoirs dans une heure ou deux après le départ du Windrunner. [30]</em></p>
+<h4 id="fabriaux-avancée-15-points"><a class="header" href="#fabriaux-avancée-15-points">Fabriaux avancée (15 points)</a></h4>
+<p>L'art avancé de la fabrication de fabriaux permet d'associer plusieurs gemmes dans un même artefact.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<p><strong>Qualité unique : Gemmes multiple</strong></p>
+<p><em>Coût de construction : +2 par gemme</em></p>
+<p>Plusieurs gemmes peuvent être associés dans un même artefact.</p>
+</li>
+</ul>
+<h4 id="allomancie-10-points"><a class="header" href="#allomancie-10-points">Allomancie (10 points)</a></h4>
+<p>L'allomancie permet de se doter temporairement de capacités en brûlant du métal traité par l'allomancien en l'ingérant. 
+La préparation d'une dose de métal créé un canal entre la source d'origine de l'allomancie et le fragment de métal.
+Lorsque l'allomancien ingère le fragment il &quot;brûle&quot; le métal et acquière les effets jusqu'à la complète métabolisation du fragment.
+Un seul fragment à la fois possible.
+Il faut environ une heure pour produire une dose.
+Les métaux se présentent sous forme de billes à ingérer et possède les caractéristiques suivantes :</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Pureté du métal</th><th style="text-align: center">Métabolisation</th><th style="text-align: left">Effets</th><th style="text-align: center">Préparation</th></tr></thead><tbody>
+<tr><td style="text-align: center">Impure</td><td style="text-align: center">2</td><td style="text-align: left">Métabolisation mineure</td><td style="text-align: center">1 heure</td></tr>
+<tr><td style="text-align: center">Commune</td><td style="text-align: center">4</td><td style="text-align: left">Métabolisation standard</td><td style="text-align: center">30 min</td></tr>
+<tr><td style="text-align: center">Pure</td><td style="text-align: center">8</td><td style="text-align: left">Métabolisation doublée</td><td style="text-align: center">30 min</td></tr>
+<tr><td style="text-align: center">Parfaite</td><td style="text-align: center">12</td><td style="text-align: left">Métabolisation parfaite</td><td style="text-align: center">30 min</td></tr>
+<tr><td style="text-align: center">Originelle</td><td style="text-align: center">16</td><td style="text-align: left">Métabolisation extraordinaire</td><td style="text-align: center">10 min</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Runes</th><th style="text-align: center">Métaux</th><th style="text-align: center">Type</th><th style="text-align: left">Effet                                                                                                                                                                                              -</th></tr></thead><tbody>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Steel.svg" alt="Steel.svg" style="zoom:10%;" /></td><td style="text-align: center">Acier</td><td style="text-align: center">Base</td><td style="text-align: left">Pousse sur les métaux à proximité.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Iron.svg" alt="Iron.svg" style="zoom:10%;" /></td><td style="text-align: center">Fer</td><td style="text-align: center">Base</td><td style="text-align: left">Tire sur les métaux à proximité.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Pewter.svg" alt="Pewter.svg" style="zoom: 10%;" /></td><td style="text-align: center">Etain</td><td style="text-align: center">Base</td><td style="text-align: left"><u>Etain pur</u> : Augmente les capacités physiques. <u>Etain sombre</u> : Augmente les sens.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Chromium.svg" alt="Chromium.svg" /></td><td style="text-align: center">Chromium</td><td style="text-align: center">Base</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Zinc.svg" alt="Zinc.svg" style="zoom:10%;" /></td><td style="text-align: center">Zinc</td><td style="text-align: center">Base</td><td style="text-align: left">Augmente les émotions autour de lui.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Brass.svg" alt="Brass.svg" style="zoom:10%;" /></td><td style="text-align: center">Laiton</td><td style="text-align: center">Base</td><td style="text-align: left">Attenue les émotions</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Copper.svg" alt="Copper.svg" style="zoom:10%;" /></td><td style="text-align: center">Cuivre</td><td style="text-align: center">Base</td><td style="text-align: left"><em>Dissimule les impulsions Allomantique, les sprens</em> Detection de pouvoirs</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Bronze.svg" alt="Bronze.svg" style="zoom:10%;" /></td><td style="text-align: center">Bronze</td><td style="text-align: center">Base</td><td style="text-align: left"><em>Détecte les impulsions Allomantique, les sprens</em> Dissimulation de pouvoirs</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Nicrosil.svg" alt="Nicrosil.svg" style="zoom:10%;" /></td><td style="text-align: center">Nicrosil</td><td style="text-align: center">Noble</td><td style="text-align: left">Décuple les autres métaux chez une cible.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Gold.svg" alt="Gold.svg" style="zoom:10%;" /></td><td style="text-align: center">Or</td><td style="text-align: center">Noble</td><td style="text-align: left">Permet de percevoir une augure du passé.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Cadmium.svg" alt="Cadmium.svg" style="zoom:10%;" /></td><td style="text-align: center">Cadmium</td><td style="text-align: center">Noble</td><td style="text-align: left">Crée une bulle temporelle qui ralentit le temps.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Bendalloy.svg" alt="Bendalloy.svg" style="zoom:10%;" /></td><td style="text-align: center">Bendalloy</td><td style="text-align: center">Noble</td><td style="text-align: left">augmente le temps.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Lerasium.svg" alt="Lerasium.svg" style="zoom:10%;" /></td><td style="text-align: center">Lérasium</td><td style="text-align: center">Divin</td><td style="text-align: left">Augmente le pouvoir Allomantique.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Ettmetal_%28Alloy_of_Law%29.svg" alt="img" style="zoom:10%;" /></td><td style="text-align: center">Harmonium</td><td style="text-align: center">Divin</td><td style="text-align: left">Harmonise plusieurs métaux, explosif au contact d'un liquide.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Aluminum.svg" alt="Aluminum.svg" style="zoom:10%;" /></td><td style="text-align: center">Aluminium</td><td style="text-align: center">Spécial</td><td style="text-align: left">Neutralise les autres métaux, Négation.</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie : Acier</strong></li>
+</ul>
+<p><em>Durée de l'effet : métabolisation minutes</em> | <em>Puissance de l'effet : Attribut Force + métabolisation</em></p>
+<p>Permet d'exercer une poussée sur tout métal à proximité depuis le &quot;centre de soi&quot;. Lors de l'utilisation, des lignes de lumières bleues émergent de l'utilisateur et se connectent à des morceaux de métal à proximité, de taille variables en fonction de la quantité de métal. Les capacités obtenues sont les suivantes :</p>
+<ul>
+<li><strong>Investigation</strong> : Permet d'utiliser les lignes pour détecter les métaux et leurs natures, les liaisons électromagnétiques, les métaux contenus dans les organismes.</li>
+<li><strong>Poussée</strong> : Permet de pousser en ligne droite un métal avec une force équivalente à l'attribut force de l'utilisateur. Pousser un petit objet le rend plus rapide et potentiellement plus dangereux. Il est possible de la même manière de rajouter une poussée à un objet en mouvement, ce qui le rend encore plus rapide. Un Allomancien expérimenté pourrait même utiliser la poussée pour voler pour peu que quelques pièces de monnaie soit situées sous lui au sol.</li>
+<li><strong>Bulle magnétique</strong> : Utiliser de manière défensive, l'utilisateur créé une bulle de poussée constante autour de lui pour repousser tout objet y entrant. Très efficace contre les armes blanches, son utilisation reste probante sur les projectile à haute vélocité.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Fer</strong></li>
+</ul>
+<p>Permet d'exercer une attraction sur tout métal à proximité. Lors de l'utilisation, des lignes de lumières bleues émergent de l'utilisateur et se 	connectent à des morceaux de métal à proximité, de taille variables en fonction de la quantité de métal. Les capacités obtenues sont les suivantes :</p>
+<ul>
+<li><strong>Investigation</strong> : Permet d'utiliser les lignes pour détecter les métaux et leurs natures, les liaisons électromagnétiques, les métaux contenus dans les organismes.</li>
+<li><strong>Traction</strong> : Permet de tirer en ligne droite un métal avec une force équivalente à l'attribut force de l'utilisateur. Le Fer est souvent utilisé de manière défensive permettant de faire dévier de assez efficacement les projectiles vers un bouclier porté par l'Allomancien par exemple. Il reste moins utile pour sauter car il nécessite un assez gros morceau de métal pour &quot;tirer&quot; sa propre masse corporelle.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Etain pur</strong></li>
+</ul>
+<p>Brûler de étain pour agit sur les cinq sens.</p>
+<ul>
+<li><strong>Troisième œil</strong> : Harmonise l'ensemble des sens permettant de s'ouvrir totalement à son environnement et de sentir son environnement de manière unique.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Etain sombre</strong></li>
+</ul>
+<p>Brûler de l'étain sombre améliore les capacités physiques.</p>
+<ul>
+<li>Un brumisateur d'étain est connu sous le nom de Thug ou Pewterarm . [2] L'utilité de l'étain ne vient pas simplement de l'augmentation de la résistance ou de la vitesse. Il donne à l'utilisateur la possibilité de guérir de blessures autrement mortelles et de récupérer beaucoup plus rapidement. L'aluminium dans une plaie empêchera le Thug de guérir la blessure autour du métal aussi longtemps qu'il restera dans le corps. [3] L'étain améliore également l'équilibre naturel du corps, permettant des mouvements presque anormalement doux. Il augmente également la vitesse de réaction et leur confère une résistance aux températures chaudes et froides. [4] Enfin, il augmente l'endurance, permettant au corps de continuer longtemps après qu'il se serait normalement éteint. L'étain peut être dangereux lorsqu'il s'épuise, ce qui est une préoccupation sérieuse car c'est le plus rapide des huit métaux de base. [5] Un voyou qui vient de survivre à une blessure mortelle peut mourir des effets résultants lorsque le corps manque d'étain à brûler. Cependant, le corps brûlera naturellement de l'étain pour tenter de se guérir, de sorte que même un voyou inconscient peut recevoir de l'étain supplémentaire pour survivre à des situations autrement mortelles. L'étain double à peu près la force d'une personne moyenne et la triple lorsqu'il est évasé. [6]</li>
+<li><strong>Diffusion lente</strong> : En brûlant constamment de l'étain pendant une longue période (traînage d'étain), un Thug peut réaliser des choses incroyables, comme courir à peu près à la vitesse d'un cheval au galop pendant de longues périodes. Cependant, cela est extrêmement dangereux et pourrait même être mortel lorsque le Thug arrête de brûler de l'étain, même sans tenir compte du fait que le traînage répété de l'étain conduira au savantisme , car il y a une soudaine poussée de fatigue intense qui avait été supprimée par l'étain. Plusieurs jours de repos et suffisamment de nourriture sont nécessaires pour reconstituer le Thug par la suite. [sept]</li>
+<li>Savantism
+Si quelqu'un était capable de brûler la quantité d'étain nécessaire pour devenir un savant allomantique avec le métal, il aurait des capacités physiques améliorées telles que la capacité de guérir plus rapidement, mais pas aussi rapidement que quelqu'un qui puise dans la santé d'un esprit d'or . [8] Les voyous meurent souvent avant de devenir des savants, car ils ne ressentent ni douleur ni épuisement dans une grande mesure et peuvent donc ignorer les blessures qui s'avèrent plus tard mortelles. [9]</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Chromium</strong></li>
+</ul>
+<p>???</p>
+<ul>
+<li>???</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Zinc</strong></li>
+</ul>
+<p>Augmente les émotions autour de lui.</p>
+<ul>
+<li>
+<p>Un brumisateur de zinc est connu sous le nom de Rioter . L'allomancie émotionnelle n'est pas un contrôle mental, mais elle permet au praticien d'influencer les émotions de ceux qui l'entourent. C'est ce qu'on appelle l' émeute ou la rage . [1] [2] Les effets peuvent être ciblés sur un individu ou un groupe spécifique et peuvent se concentrer sur des émotions spécifiques. [3] Les émotions d'émeute peuvent être utilisées pour augmenter le désir, la détermination ou la colère de quelqu'un. Il peut accomplir plusieurs des mêmes choses que les émotions apaisantes en éliminant toutes les émotions sauf les émotions spécifiées. Les émotions extrêmes de la cible interféreront avec l' allomancie émotionnelle . [4]L'allomancie émotionnelle peut affecter les animaux, mais elle nécessite une certaine dose de sapience. [5] L'allomancie émotionnelle a également un effet plus convaincant sur Lifeless par rapport à une personne ordinaire. [6]</p>
+<p>Des émeutes très puissantes peuvent mettre une créature hémalurgique sous le contrôle total de l'émeutier, et une fois contrôlées, les émeutes ne sont plus nécessaires. Cela peut être réalisé soit par un Mistborn ou un Hemalurgist solitaire brûlant du duralumin et du zinc ensemble, une combinaison d'un Nicroburst et d'un Rioter, ou un groupe de Rioters et/ou Soothers, bien qu'au début de l' Empire Final , lorsque l'allomancie était beaucoup plus puissant, un seul Rioter était capable de le faire. [7] [8] [9]</p>
+<p>Les émeutes à l'intérieur d'une bulle de vitesse pourraient donner les mêmes effets que la combustion du duralumin, et peuvent toujours être visées sans les obstacles normaux de la sortie des bulles de temps. [10] L'aluminium au-dessus de la tête de la victime ou peut-être de la poitrine de l'émeutier arrête les émeutes. [11] Il peut également être arrêté par le casque d'un Shardplate . [12]</p>
+<p>Après la Catacendre , il est illégal pour une entreprise d'utiliser les Rioters pour influencer les clients. [13] C'était l'une des dispositions de l' accord allomantique de 1994 . Cependant, l'utilisation consensuelle de l'allomancie émotionnelle n'est pas interdite, et certains émeutiers, connus sous le nom de conseillers en zinc, utilisent leurs capacités comme une sorte de thérapie. [14] [14]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Laiton</strong></li>
+</ul>
+<p>Attenue les émotions</p>
+<ul>
+<li>
+<p>Une brumisation en laiton est connue sous le nom de sucette . L'allomancie émotionnelle n'est pas un contrôle mental, mais elle permet au praticien d'influencer les émotions de ceux qui l'entourent. Les effets peuvent être ciblés sur un individu ou un groupe spécifique et peuvent se concentrer sur des émotions spécifiques. [1] Les émotions apaisantes peuvent être utilisées pour diminuer la fatigue, la peur ou le bonheur d'une personne. Il peut accomplir plusieurs des mêmes choses que les émotions d' émeute en apaisant toutes les émotions sauf les émotions spécifiées. Les émotions extrêmes de la cible interféreront avec l'allomancie émotionnelle. [2] L'allomancie émotionnelle peut affecter les animaux, mais elle nécessite une certaine dose de sapience. [3] L'allomancie émotionnelle a également un effet plus convaincant surSans vie par rapport à une personne ordinaire. [4] Les sucettes peuvent affecter les rythmes d'un chanteur et peuvent être capables d'atténuer l' influence d'Odium . [5]</p>
+<p>Un Apaisant très puissant peut mettre une créature Hémalurgique sous contrôle total, et une fois contrôlé, l'Apaisant n'est plus nécessaire. Cela peut être réalisé par un seul né des brumes ou un hémalurgiste brûlant du duralumin et du laiton ensemble, une combinaison d'un Nicroburst et d'une sucette, ou un groupe de sucettes et/ou d'émeutiers travaillant ensemble, bien qu'au début de l' Empire final , lorsque l'allomancie était beaucoup plus puissant, une seule sucette était capable de le faire. [6] [7] [8]</p>
+<p>L'apaisement à l'intérieur d'une bulle de vitesse pourrait donner les mêmes effets que la combustion du duralumin, et peut toujours être visé sans les obstacles normaux de la sortie des bulles de temps. [9] L'apaisement peut être arrêté par un chapeau doublé d' aluminium et éventuellement par de l'aluminium sur la poitrine de la sucette. [10] Il peut également être arrêté par le casque d'un Shardplate . [11]</p>
+<p>Après la Catacendre , il est illégal pour une entreprise d'utiliser l'allomancie émotionnelle pour influencer les clients. [12] C'était l'une des dispositions de l' accord allomantique de 1994 . Il existe des preuves de conseils émotionnels consensuels. [13]</p>
+<p>Savantism
+La savantité est moins débilitante pour les sucettes par rapport aux autres métaux. [14]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Cuivre</strong></li>
+</ul>
+<p><em>Dissimule les impulsions Allomantique, les sprens</em> Detection de pouvoirs</p>
+<ul>
+<li>
+<p>Un brumisateur de cuivre est connu sous le nom de Coppercloud ou Smoker . Lorsqu'un allomancien brûle du cuivre, les impulsions des allomanciens à proximité ne peuvent pas être détectées par la plupart des chercheurs . [1] Les allomanciens avec une pointe hémalurgique qui améliore leur capacité naturelle avec du bronze, des allomanciens génétiquement plus puissants, tels que ceux créés avec du lerasium , et des savants de bronze sont tous capables de &quot;percer&quot; un nuage de cuivre. [2] [3] Nicrosil peut également permettre à un Mistborn ou à un Seeker de percer un coppercloud pendant un bref instant ; le duralumin fonctionnerait également pour un Mistborn. [4]Plusieurs fumeurs brûlant du cuivre dans la même zone rendront le nuage de cuivre résultant plus difficile à percer. [5] Comme peu d'Allomanciens ont la capacité de percer un nuage de cuivre, les Fumeurs sont d'une importance capitale lorsque les Allomanciens essaient de se cacher. Si un chercheur se trouve à l'intérieur d'un nuage de cuivre, il ne pourra recevoir aucune impulsion de l'extérieur. [6] Le cuivre est le métal à combustion la plus lente des huit métaux allomantiques de base. [sept]</p>
+<p>Les Copperclouds peuvent également bloquer d'autres utilisations d'Investiture. Sur Scadrial, cela se voit le plus souvent dans sa capacité à protéger l'utilisateur de l'allomancie émotionnelle ; [8] protéger les autres dans les limites du cloud est très difficile mais pas impossible. [9] Les Copperclouds bloquent également d'autres méthodes de détection d'investiture, telles que le sens de la vie d' un éveilleur ou la capacité d'un secretpren à détecter l'utilisation d'investiture. [10] [11] Supplémentairement, un coppercloud peut interférer des utilisations plus passives d'Investiture; par exemple, cela peut empêcher un chanteur d'accorder un rythme et affecter la façon dont Spren agit. [12] [13]</p>
+<p>Savantism
+Savanthood est moins débilitant pour les fumeurs par rapport aux autres métaux. [14]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Bronze</strong></li>
+</ul>
+<p><em>Détecte les impulsions Allomantique, les sprens</em> Dissimulation de pouvoirs</p>
+<ul>
+<li>
+<p>Un brumisateur de bronze est connu comme un chercheur . Lorsqu'un attrapeur brûle du bronze, il est capable de détecter l'utilisation de l'allomancie à proximité. [1] Le chercheur ressent des impulsions, comme des battements de tambour, émanant de la personne qui brûle un métal. Les métaux sont regroupés en rapides et lents, poussant et tirant, et ont leur propre sensation de signature. C'est ainsi que l'on sait que le bronze est un métal qui pousse, tandis que le cuivre est qui tire. [2]</p>
+<p>Il est plus facile de sentir un allomancien brûler son métal. [3]</p>
+<p>Les impulsions détectées par un Chercheur sont liées au ton de la Préservation . [4] Si un chanteur devenait Sourcier ou Né des Brumes, il trouverait les impulsions de bronze familières, bien qu'étranges. [5]</p>
+<p>Savantism
+Si quelqu'un était capable de brûler la quantité de bronze nécessaire pour devenir un savant allomantique avec le métal, sa portée serait élargie [6] et il pourrait être capable de percer des nuages de cuivre en fonction de sa force relative. [7] Un savant serait également capable de faire la différence entre l'allomancie régulière et la composition . [8] En raison de la tendance des Chercheurs à brûler constamment du bronze, beaucoup sont devenus des savants sans le savoir. [6]</p>
+<p>Détection d'investiture 
+Il est théoriquement possible pour l'Allomancie de bronze de détecter n'importe quelle Investiture cinétique , [9] [10] bien qu'elle ait du mal à trouver des puits de puissance inactifs. [11] Le bronze peut détecter :</p>
+<p>Férochémie [10]
+Surgebinding , y compris être capable de différencier les surtensions [12]
+AonDor [13]
+Réveil [13]
+Les Rythmes de Roshar [14]
+Éclatslames lorsqu'ils sont invoqués [15]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Nicrosil</strong></li>
+</ul>
+<p>Décuple les autres métaux chez une cible.</p>
+<ul>
+<li>
+<p>Une brumisation de nicrosil est connue sous le nom de Nicroburst . Un Nicroburst brûlant du nicrosil et touchant un autre Allomancien fera disparaître les réserves de métaux en cours de combustion de ce dernier et donnera une énorme poussée de puissance au destinataire. [1] Cela peut causer des problèmes avec des métaux tels que l' étain , où la surcharge mentale peut provoquer une perte de conscience.</p>
+<p>Renforcement de l'investiture 
+Un Nicroburst peut également stimuler d'autres formes d'investiture, telles que la féruchemie , mais uniquement lorsque le féruchimiste exploite son esprit métallique. [2]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Or</strong></li>
+</ul>
+<p>Permet de percevoir une augure du passé.</p>
+<ul>
+<li>Une brumisation d'or est connue sous le nom d' augure . Un Augur brûlant de l'or est capable de voir une hallucination de qui aurait pu être l'utilisateur, connue sous le nom d'&quot;ombre d'or&quot;. [1] En raison du stress émotionnel associé au fait de voir son passé alternatif, l'or n'est pas un métal très utile. De plus, toucher l'ombre dorée pendant la combustion de l'or provoque des effets secondaires désagréables. [2] Chaque fois qu'un Augure brûle de l'or, il voit une image différente, car elle change en fonction de sa situation actuelle. [3] Une ombre dorée changera également si une personne est estampillée d'une marque d'essence . [4]</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Cadmium</strong></li>
+</ul>
+<p>Crée une bulle temporelle qui ralentit le temps.</p>
+<ul>
+<li>
+<p>Un brumisateur de cadmium est connu sous le nom de Pulser . La combustion du cadmium allonge le temps autour de l'utilisateur, ce qui fait que le temps passe plus lentement dans une bulle autour d'eux. Les événements à l'extérieur de la bulle semblent se déplacer beaucoup plus rapidement vers quelqu'un à l'intérieur. [1]</p>
+<p>Lorsqu'une bulle de cadmium et une bulle de bendalloy se produisent au même endroit, leurs effets s'annulent, ce qui n'entraîne aucun changement tout en brûlant les métaux utilisés. [2] [3] La bulle de temps créée par un Pulser a à peu près la taille d'une pièce, plus grande qu'une bulle de temps créée en brûlant du bendalloy. [3] Un examen attentif peut révéler le bord de la bulle, où l'air semble scintiller.</p>
+<p>Lorsqu'une bulle temporelle est créée, la zone de la bulle reste stationnaire par rapport à un objet en mouvement tant que le Pulser qui la crée est stationné sur un objet suffisamment grand. Par exemple, quelqu'un se tenant sur une planète, qui est assez massive, se déplace toujours avec la rotation de la planète, et la bulle se déplace avec cette personne, mais la bulle elle-même reste au même endroit par rapport à la planète. Cependant, si le Pulser qui a créé une bulle temporelle se trouve sur un petit objet en mouvement (ou si la personne marche simplement jusqu'au bord de la bulle), le Pulser sera transporté à travers la bulle, la « faisant éclater ». [4] Les objets entrant ou sortant de la bulle sont projetés hors de leur trajectoire, très probablement parce que différentes parties de l'objet se déplacent à des vitesses différentes pendant la transition. [2]A la sortie de la bulle, les bulles temporelles interfèrent avec presque toutes les formes d' investiture . [5] Lorsque plusieurs bulles se produisent dans le même espace, leurs effets sont multipliés. [6]</p>
+<p>Certaines utilisations potentielles &quot;non combatives&quot; de l'allomancie au cadmium comprennent l'avancement du temps personnel à une date souhaitée, [3] l'art de la performance dans lequel un ou plusieurs interprètes utilisent des &quot;impulsions&quot; de cadmium pour améliorer l'exposition et l'observation scientifique des processus / réactions qui autrement ne pas être observable en temps réel. [citation nécessaire] Le cadmium est impliqué de multiples façons avec un voyage plus rapide que la lumière. [sept]</p>
+<p>Les bulles de temps peuvent être éclatées par l'aluminium . [8]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Bendalloy</strong></li>
+</ul>
+<p>augmente le temps.</p>
+<ul>
+<li>
+<p>Une brumisation bendalloy est connue sous le nom de Slider . La combustion du bendalloy pousse le temps autour de l'utilisateur, ce qui fait que le temps passe plus rapidement dans une bulle autour d'eux. Les événements à l'extérieur de la bulle semblent se déplacer beaucoup plus lentement vers quelqu'un à l'intérieur. [3] Une pépite de bendalloy peut compresser environ deux minutes en quinze secondes. [2]</p>
+<p>Lorsqu'une bulle de bendalloy et une bulle de cadmium se produisent au même endroit, leurs effets s'annulent, ce qui n'entraîne aucun changement tout en brûlant les métaux utilisés. [4] [2] La bulle de temps créée par un curseur mesure environ cinq pieds de diamètre et est plus petite que celle possible lors de la combustion de cadmium. Un examen attentif peut révéler le bord de la bulle, où l'air semble scintiller.</p>
+<p>Lorsqu'une bulle temporelle est créée, la zone de la bulle reste stationnaire par rapport à un objet en mouvement tant que le curseur qui la crée est stationné sur un objet suffisamment grand. Par exemple, quelqu'un se tenant sur une planète, qui est assez massive, se déplace toujours avec la rotation de la planète, et la bulle se déplace avec cette personne, mais la bulle elle-même reste au même endroit par rapport à la planète. Cependant, si le Slider qui a créé une bulle temporelle se trouve sur un petit objet en mouvement (ou si la personne marche simplement jusqu'au bord de la bulle), le Slider sera transporté à travers la bulle, la « faisant éclater ». [5] Les objets entrant ou sortant de la bulle sont projetés hors de leur trajectoire, très probablement parce que différentes parties de l'objet se déplacent à des vitesses différentes pendant la transition. [4]A la sortie de la bulle, les bulles temporelles interfèrent avec presque toutes les formes d' investiture . [6] Cependant, ils n'interfèrent pas avec l'allomancie émotionnelle. [7] Lorsque plusieurs bulles se produisent dans le même espace, leurs effets sont multipliés. [8]</p>
+<p>Si un Slider s'embrase lors de la formation d'une bulle de temps, le temps à l'intérieur de la bulle est encore plus accéléré. La taille et la vitesse de la bulle sont à peu près déterminées lors de sa formation. [9] Bendalloy est impliqué de plusieurs manières avec des déplacements plus rapides que la lumière. [dix]</p>
+<p>Une bulle de vitesse peut être éclatée par l'aluminium . [11]</p>
+<p>Savantism
+Si quelqu'un était capable de brûler la quantité de bendalloy nécessaire pour devenir un savant allomantique avec le métal, il serait capable d'ancrer la bulle de vitesse à lui-même, permettant à la bulle de vitesse de se déplacer avec lui. Cela entraînerait des complications pour les objets entrant et sortant de la bulle car l'énergie est transférée vers et depuis le royaume spirituel pour empêcher le décalage vers le rouge et le décalage vers le bleu. [12] Ils seraient également en mesure d'influencer la taille de la bulle et le temps qu'elle donne. [13]</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Lerasium</strong></li>
+</ul>
+<p>Augmente le pouvoir Allomantique.</p>
+<ul>
+<li>
+<p>Pour les gens normaux, brûler du lérasium forge une connexion permanente entre eux et la préservation, les transformant en né des brumes très puissants en réécrivant leur ADN spirituel . [2] Pour les personnes déjà nées des Brumes, le même effet augmente leur puissance. [5] Cependant, transformer les gens en Mistborn n'est qu'un effet secondaire de la combustion du lerasium; si quelqu'un qui savait s'en servir correctement le brûlait, cela aurait un effet différent, encore inconnu. [6] Quelqu'un d'assez bien informé pourrait utiliser la réécriture de son ADN spirituel pour obtenir un résultat différent de celui de devenir un Mistborn. [7] [8] Duralumin brûlanten conjonction avec le lerasium n'a aucun effet sur la force du Mistborn créé, [9] mais la taille de la perle affecte la force du Mistborn créé. [dix]</p>
+<p>Les alliages de lérasium ont pour effet secondaire de transformer ceux qui les brûlent en brumisateurs de l'alliage utilisé. [11] Les alliages de lérasium et d'autres métaux divins peuvent faire gagner à ceux qui les brûlent l' investiture associée au métal divin. [12] Les principaux effets des alliages de lérasium sont également inconnus.</p>
+<p>Savantism
+Si quelqu'un était capable de brûler la quantité de lérasium nécessaire pour devenir un savant allomantique avec le métal, il monterait et deviendrait le détenteur de la préservation, comme ce qui s'est passé lorsque Vin a consommé les brumes . [13] Cela est dû à la nature du métal en tant que puissance condensée de la Préservation.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Harmonium</strong></li>
+</ul>
+<p>Harmonise plusieurs métaux, explosif au contact d'un liquide.</p>
+<ul>
+<li><strong>Troisième œil</strong> : Harmonise l'ensemble des sens permettant de s'ouvrir totalement à son environnement et de sentir son environnement de manière unique.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Allomancie  : Aluminium</strong></li>
+</ul>
+<p>Neutralise les autres métaux, Négation.</p>
+<ul>
+<li>
+<p>Un brumisateur d'aluminium est connu sous le nom de moucheron d'aluminium . La combustion de l'aluminium amène le corps à métaboliser instantanément ses réserves de métal sans aucun autre effet. [9] En tant que tel, un Aluminium Gnat ne gagne aucun pouvoir utilisable de son Allomancie, [4] cependant, il peut être utilisé pour annuler les effets d'autres Investiture, tels que l'effet de flétrissement des Shades sur Threnody . [10] Seuls les métaux allomantiquement pertinents peuvent être brûlés. [11] L'allomancie n'affecte pas l'aluminium même si le métal lui-même est allomantiquement viable. [12]</p>
+<p>Étant donné que l'aluminium peut protéger contre l'allomancie émotionnelle, ceux qui en ont les moyens portent souvent des chapeaux avec une doublure en aluminium. [13] Il peut également être utilisé pour bloquer le bronze allomantique . [14]</p>
+<p>Savantism
+Si quelqu'un était capable de brûler la quantité d'aluminium nécessaire pour devenir un savant allomantique avec le métal, il serait peut-être possible de nettoyer son esprit des effets indésirables de l'investiture. [15]</p>
+</li>
+</ul>
+<h4 id="ferochimie10-points"><a class="header" href="#ferochimie10-points">Ferochimie(10 points)</a></h4>
+<p>Permet de stocker des capacités autrement impossible dans des receptacles en métal.</p>
+<p>La quantité et la pureté du métal à une influence sur la capacité de stockage.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Taille</th><th style="text-align: center">Capacité de stockage</th><th style="text-align: center">Pureté</th><th style="text-align: center">Bonus au stock</th></tr></thead><tbody>
+<tr><td style="text-align: center">Eclat</td><td style="text-align: center">Entre 1 et 4</td><td style="text-align: center">Impure</td><td style="text-align: center">0</td></tr>
+<tr><td style="text-align: center">Petit (bille...)</td><td style="text-align: center">Entre 5 et 8</td><td style="text-align: center">Commune</td><td style="text-align: center">+2</td></tr>
+<tr><td style="text-align: center">Bracelet - collier</td><td style="text-align: center">Entre 9 et 12</td><td style="text-align: center">Pure</td><td style="text-align: center">+4</td></tr>
+<tr><td style="text-align: center">Canif</td><td style="text-align: center">Entre 13 et 16</td><td style="text-align: center">Parfaite</td><td style="text-align: center">+6</td></tr>
+<tr><td style="text-align: center">Couteau - Dague</td><td style="text-align: center">Entre 17 et 20</td><td style="text-align: center">Originelle</td><td style="text-align: center">+8</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th style="text-align: center">Runes</th><th style="text-align: center">Métaux</th><th>Type</th><th style="text-align: left">Effet                                                                                                                                                                                              -</th></tr></thead><tbody>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Steel_%28Feruchemy%29.svg" alt="Acier" style="zoom:10%;" /></td><td style="text-align: center">Acier</td><td>Base</td><td style="text-align: left">Stock le poids physique.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Iron_%28Feruchemy%29.svg" alt="Le fer" style="zoom:10%;" /></td><td style="text-align: center">Fer</td><td>Base</td><td style="text-align: left">Stocke la vitesse physique.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Tin_%28Feruchemy%29.svg" alt="Croire" style="zoom:10%;" /></td><td style="text-align: center">Etain</td><td>Base</td><td style="text-align: left">Etain pur : Stocke les sens. Etain sombre : Stocke la force physique. SENS FORCE</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Chromium_%28Feruchemy%29.svg" alt="Chromium" style="zoom:10%;" /></td><td style="text-align: center">Chromium</td><td>Base</td><td style="text-align: left">??</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Zinc_%28Feruchemy%29.svg" alt="Zinc" style="zoom:10%;" /></td><td style="text-align: center">Zinc</td><td>Base</td><td style="text-align: left">Stocke la résistance mentale VOLONTE</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Brass_%28Feruchemy%29.svg" alt="Laiton" style="zoom:10%;" /></td><td style="text-align: center">Laiton</td><td>Base</td><td style="text-align: left">Stocke la chaleur.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Copper_%28Feruchemy%29.svg" alt="Cuivre" style="zoom:10%;" /></td><td style="text-align: center">Cuivre</td><td>Base</td><td style="text-align: left">Stocke la mémoire.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Bronze_%28Feruchemy%29.svg" alt="Bronze" style="zoom:10%;" /></td><td style="text-align: center">Bronze</td><td>Base</td><td style="text-align: left"><em>Stocke l'éveil.</em></td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Nicrosil_%28Feruchemy%29.svg" alt="Nicrosil" style="zoom:10%;" /></td><td style="text-align: center">Nicrosil</td><td>Noble</td><td style="text-align: left">Stocke l'investiture.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Gold_%28Feruchemy%29.svg" alt="Gold" style="zoom:10%;" /></td><td style="text-align: center">Or</td><td>Noble</td><td style="text-align: left">Stocke la santé.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Cadmium_%28Feruchemy%29.svg" alt="Cadmium" style="zoom:10%;" /></td><td style="text-align: center">Cadmium</td><td>Noble</td><td style="text-align: left">Stocke le souffle.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Bendalloy_%28Feruchemy%29.svg" alt="Bendalloy" style="zoom:10%;" /></td><td style="text-align: center">Bendalloy</td><td>Noble</td><td style="text-align: left">Stocke l'energie.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Malatium_%28Feruchemy%29.svg" alt="Malatium (Feruchemy).svg" style="zoom:1%;" ></td><td style="text-align: center">Lerasium</td><td>Divin</td><td style="text-align: left">Inconnu</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Ettmetal_%28Feruchemy%29.svg" alt="Ettmetal (Feruchemy).svg" style="zoom:8%;" /></td><td style="text-align: center">Harmonium</td><td>Divin</td><td style="text-align: left">Inconnu.</td></tr>
+<tr><td style="text-align: center"><img src="https://coppermind.net/w/images/Aluminum_%28Feruchemy%29.svg" alt="Aluminum" style="zoom:10%;" /></td><td style="text-align: center">Aluminium</td><td>Spécial</td><td style="text-align: left">Stocke l'identité.</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Acier</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 10% de sa propre vitesse</em> | <em>Equivalence 2 pts d'attributs</em></p>
+<p>L'acier permet de stocker la vitesse.</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste se retrouve très lent, comme englué dans une sorte de mélasse.</li>
+<li><strong>Restitution</strong> : La restitution permet de au Férochimiste de se déplacer plusieurs fois plus vite qu'un humain standard. Ce dernier doit tout de même faire particulièrement attention aux risques liés aux obstacles ou encore à la friction de l'air.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Fer</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 10% de sa propre masse</em>| <em>Equivalence 2 pts d'attributs</em></p>
+<p>L'acier permet de stocker la masse.</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste se retrouve plus léger même si cela n'affecte pas ce qu'il porte.</li>
+<li><strong>Restitution</strong> : La restitution permet de au Férochimiste de s'adjoindre de la masse afin de résister à des actions visant à le renverser par exemple. Les utilisateurs aguerries arrivent à libérer de la masse au moment ou ils frappent ce qui renforce la puissance des coups portés.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Etain pur</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 2 point de l'attribut Sens</em></p>
+<p>L'étain pur permet de stocker ses propres sens. Chaque sens doit être stocké séparément.</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Etain sombre</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 2 points pour 1 point en Endurance + 1 point en Force</em></p>
+<p>L'étain pur permet de stocker ses propres sens. Chaque sens doit être stocké séparément.</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Chromium</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>??</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Zinc</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke la résistance mentale VOLONTE</p>
+<p>Un zinc Ferring est connu comme un Sparker . Le zinc est utilisé pour stocker la vitesse mentale. Cela permet au Sparker de réfléchir très rapidement et de tirer des conclusions plus rapidement. Tout en remplissant un zincmind, le Sparker sera stupide et lent. [3] Le stockage n'affecte pas la capacité du Sparker à prendre des informations physiques, mais il augmente le temps nécessaire pour traiter ces informations. Par exemple, un Sparker remplissant son zincmind percevra les mots sans délai, mais mettra plus de temps à analyser leur sens. [15] Taper du zinc a l'étrange effet secondaire de rendre l'utilisateur affamé. [16]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Laiton</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke la chaleur.</p>
+<p>Un laiton Ferring est connu sous le nom de Firesoul . Le laiton est utilisé pour stocker la chaleur. Tout en remplissant un brassmind, un Firesoul sera cool. [1] Le corps d'une âme de feu, un peu comme celui d'un écumeur , est capable de résister aux températures plus élevées de sa féruchemie, mais n'est pas à l'abri d'une chaleur intense en général. [15] En refroidissant le corps en remplissant un brassmind, cependant, on pourrait résister à des températures plus élevées; la chaleur s'écoulerait vers la région la plus froide de leur corps, puis serait stockée dans l'esprit de cuivre, permettant de devenir immunisé contre le feu et d'autres sources de chaleur intense en régulant soigneusement la vitesse à laquelle on remplissait son esprit de métal. [15]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Cuivre</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke la mémoire.</p>
+<p>Un cuivre Ferring est connu comme archiviste . Le cuivre est utilisé pour stocker des souvenirs. [1] Cette capacité forme le noyau des Gardiens , un groupe de Terrisiens dédié à la préservation des connaissances. Étant donné que les souvenirs d'un Coppermind ne se dégradent pas avec le temps (bien qu'ils soient vulnérables à la manipulation de Ruin lors de leur transfert), [15] il est parfait pour la collecte d'énormes quantités de faits. Pour cette raison, les féruchemistes étaient beaucoup plus susceptibles d'être des érudits que des guerriers. Lorsqu'un Archiviste stocke un souvenir dans un Coppermind, il disparaît immédiatement de sa mémoire. Les souvenirs stockés dans un Coppermind sont classés individuellement et ne sont pas considérés comme un seul souvenir pour l'archiviste.[16] Les meilleurs utilisateurs de Copperminds créeraient des index pour trouver des souvenirs beaucoup plus rapidement. Enfin, plus un souvenir reste longtemps en dehors d'un esprit cuivré, plus il se dégrade, bien que cela soit dû aux propres imperfections du cerveau, et non à une bizarrerie de la magie. [17] [18] Les gardiens subissent une formation approfondie dans la rétention de la mémoire pour tirer le meilleur parti de cette capacité. [19] Copperminds ne peut pas stocker la mémoire musculaire. [20]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Bronze</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p><em>Stocke l'éveil.</em> Un Ferring en bronze est connu sous le nom de Sentry . Le bronze est utilisé pour stocker l'éveil. Cela permet à la sentinelle de rester éveillée pendant de longues périodes ou d'augmenter sa conscience. Une sentinelle remplissant un esprit de bronze devient somnolente. [1] C'est le seul type d'esprit métallique dans lequel un féruchimiste peut stocker pendant son sommeil. [16] La caféine peut être utilisée pour générer un éveil supplémentaire, mais elle se sentirait différente après avoir été exploitée. [17]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Nicrosil</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke l'investiture.</p>
+<p>Un nicrosil Ferring est connu comme un Soulbearer . Le Nicrosil est utilisé pour stocker l' Investiture . Cette capacité n'est pas comprise (même par ceux qui l'utilisent). [1] Un Soulbearer stockant l'Investiture stocke sa capacité à utiliser son Investiture. Par conséquent, un Soulbearer pourrait stocker sa capacité à utiliser la féruchemie et une autre personne l'utilisant serait transformée en un féruchemiste temporaire qui a la capacité de remplir un esprit métallique (en supposant que le nicrosilesprit n'était pas verrouillé ). [3] Entre autres choses, un nicrosilmind peut être utilisé pour stocker le Souffle divin du Revenant et la capacité d'utiliser diverses poussées duChevaliers Radieux . [4] Remplir un nicrosilmind aussi vite que possible cache une personne du sens de la vie d'un éveilleur . [5]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Or</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke la santé.</p>
+<p>Un Ferring d'or est connu comme un faiseur de sang . L'or est utilisé pour stocker la santé. Un esprit d'or peut être exploité à la fois pour guérir à un rythme accéléré ou pour guérir de blessures qui seraient normalement mortelles. [1] Il est difficile de remplir un Goldmind, car cela oblige le Bloodmaker à passer du temps maladif et faible. L'or ne guérit pas les maladies aussi efficacement qu'il guérit les blessures. [5]</p>
+<p>La guérison par l'or fonctionne en alignant l'aspect physique d'un individu sur son moi idéal tel qu'enregistré dans son aspect spirituel. Cela ne les empêche pas de vieillir ou de certaines maladies génétiques car celles-ci sont considérées comme faisant partie de l'idéal. [6]</p>
+<p>L'aluminium dans une plaie empêchera le Bloodmaker de guérir la blessure autour du métal aussi longtemps qu'il restera dans le corps. [sept]</p>
+<p>La guérison par l'or interagirait avec les greffes d'organes d'une manière intéressante. Cela peut être bénéfique ou préjudiciable selon les circonstances. [8] Les os des Bloodmakers sont particulièrement intéressants en raison du temps qu'ils passent faibles et malades, ce qui crée des bizarreries distinctives dans les articulations et les os. [9]</p>
+<p>Les dommages à l'âme, tels que ceux causés par l'hémalurgie, peuvent être soignés par les faiseurs de sang, même s'il faudrait beaucoup de santé, c'est-à-dire aggraver, pour retrouver la capacité volée. [10] [11] Un Bloodmaker serait également capable de guérir une blessure d'un Shardblade , [12] ou d'être flétri par une ombre . [13]</p>
+<p>Savantism
+Si quelqu'un composait suffisamment d'or pour devenir un savant féruchimique avec le métal, il serait capable de survivre encore plus longtemps qu'un composé normal du métal. [19]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Cadmium</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke le souffle.</p>
+<p>Un Ferring au cadmium est connu sous le nom de Gasper . Le cadmium est utilisé pour stocker l'haleine. Tout en stockant son souffle, le Gasper doit hyperventiler pour garder son corps oxygéné. Taper sur un cadmiummind permet à l'utilisateur de ne pas respirer ou d'introduire de l'oxygène supplémentaire dans sa circulation sanguine. [1]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Bendalloy</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Stocke l'energie.</p>
+<p>Un bendalloy Ferring est connu sous le nom de Subsumer . Bendalloy est utilisé pour stocker la nutrition et les calories. Tout en remplissant un bendalloymind, un Subsumer est capable de manger de grandes quantités de nourriture sans être rassasié. Taper sur un tel esprit métallique permettra à l'utilisateur de se passer de nourriture. Un bendalloymind séparé peut être utilisé pour stocker l'apport hydrique. [3]</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Lérasium</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>??</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Harmonium</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>??</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<hr />
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Ferochimie : Aluminium</strong></li>
+</ul>
+<p><em>Temps de préparation : 1 heure</em> | <em>Stockage : 1 point pour 1 point en Endurance + 1 point en Force</em></p>
+<p>Un Ferring en aluminium est connu sous le nom de Trueself . L'aluminium est utilisé pour stocker &quot;le sens spirituel de l'identité &quot;. Cette capacité n'est pas entièrement comprise et est rarement discutée en dehors des communautés Terris. [4] Un Trueself qui remplit un aluminiummind au point où il n'a plus d'Identité, puis remplit un autre metalmind est capable de produire un metalmind que n'importe quel féruchemiste avec le pouvoir approprié peut exploiter. De la même manière, un féruchimiste peut être capable d'exploiter l'esprit métallique d'une autre personne en remplissant complètement son propre esprit aluminium. [16] Les vrais-soi peuvent soigner les dommages qui leur sont infligés dans le domaine cognitif en stockant l'identité, mais cela prend une méthode détournée. [17]Le stockage de l'identité rend le féruchemiste plus sensible à de nombreuses choses, telles que la falsification . [18]</p>
+<p>On ne sait pas pourquoi l'identité peut être stockée et retirée d'un esprit d'aluminium alors que d'autres arts investis ne peuvent pas affecter l'aluminium.</p>
+<ul>
+<li><strong>Stockage</strong> : Lors du stockage, le Férochimiste voit ses sens altérés et amoindris</li>
+<li><strong>Restitution</strong> : La restitution permet au Férochimiste de gagner en efficacité sur l'utilisation d'un sens. La vue par exemple permettrait de rendre flou le bord de la vision au profit d'une vision binoculaire plus éloignée.</li>
+</ul>
+<h4 id="composition10-points"><a class="header" href="#composition10-points">Composition(10 points)</a></h4>
+<p>Décuple l'allomancie par la Ferochimie.</p>
+<h5 id="acier"><a class="header" href="#acier">Acier</a></h5>
+<p>Un composé d'acier serait capable d'utiliser de l'acier pour avoir une quantité presque infinie de vitesse physique. [18] Ils ne pourraient pas courir plus vite que la lumière. S'il n'est pas prudent, le Steelrunner pourrait se tuer en courant trop rapidement par des facteurs tels que la résistance de l'air. [19]</p>
+<h5 id="fer"><a class="header" href="#fer">Fer</a></h5>
+<p>Composé du Fer permet de multiplier la masse.</p>
+<h5 id="etain-pur"><a class="header" href="#etain-pur">Etain pur</a></h5>
+<p>Composé du Fer permet de multiplier les Sens.</p>
+<h2 id="décuplage"><a class="header" href="#décuplage">Décuplage</a></h2>
+<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Domaine</th><th style="text-align: right">Pouvoirs</th><th style="text-align: center">Coût</th><th style="text-align: center">Titre</th><th style="text-align: center">Conditions</th></tr></thead><tbody>
+<tr><td style="text-align: center">Forge</td><td style="text-align: right">Conjuration primordiale</td><td style="text-align: center">15</td><td style="text-align: center">&quot;Modeleur (Maître)&quot;</td><td style="text-align: center">Pouvoir lié</td></tr>
+<tr><td style="text-align: center">Forge</td><td style="text-align: right">Construct</td><td style="text-align: center">15</td><td style="text-align: center">&quot;Faiseur (Maître)&quot;</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Géomancie</td><td style="text-align: right">Spiricantation</td><td style="text-align: center">15</td><td style="text-align: center">Varié</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Géomancie</td><td style="text-align: right">Ciselage de Pouvoir</td><td style="text-align: center">15</td><td style="text-align: center">Géomancien (Maître)</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Art métallique</td><td style="text-align: right">Hemalurgie</td><td style="text-align: center">15</td><td style="text-align: center">Varié</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Art métallique</td><td style="text-align: right">Construct Hemalurgique</td><td style="text-align: center">15</td><td style="text-align: center">Hémalurgiste</td><td style="text-align: center"></td></tr>
+</tbody></table>
+</div>
+<h4 id="conjuration-primordiale-15-points"><a class="header" href="#conjuration-primordiale-15-points">Conjuration primordiale (15 points)</a></h4>
+<p>Permet de doter les artefacts de capacités de niveaux 8 ou 16.</p>
+<h4 id="conjuration-de-construct-15-points"><a class="header" href="#conjuration-de-construct-15-points">Conjuration de construct (15 points)</a></h4>
+<p>Permet de conjurer des Construct (artefacts lié avec une Ombre ou plusieurs)</p>
+<h4 id="spiricantation-15-points"><a class="header" href="#spiricantation-15-points">Spiricantation (15 points)</a></h4>
+<p>Permet de puiser dans les gemmes pour utiliser instantanément les Sprens.</p>
+<h4 id="ciselage-de-pouvoir-15-points"><a class="header" href="#ciselage-de-pouvoir-15-points">Ciselage de Pouvoir (15 points)</a></h4>
+<p>Permet de graver un symbole de pouvoir dans une gemme.</p>
+<h4 id="hémalurgie-15-points"><a class="header" href="#hémalurgie-15-points">Hémalurgie (15 points)</a></h4>
+<p>Capacités à voler les caractéristiques d'autrui.</p>
+<h4 id="construct-hémalurgique-15-points"><a class="header" href="#construct-hémalurgique-15-points">Construct Hémalurgique (15 points)</a></h4>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="08_07_sorcellerie.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="09_artefacts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="08_07_sorcellerie.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="09_artefacts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

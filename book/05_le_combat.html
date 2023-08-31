@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Le combat</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="00_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Règles</li><li class="chapter-item expanded "><a href="01_le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="02_creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li><li class="chapter-item expanded "><a href="03_les_tests.html"><strong aria-hidden="true">3.</strong> Les tests</a></li><li class="chapter-item expanded "><a href="04_le_karma.html"><strong aria-hidden="true">4.</strong> Le Karma</a></li><li class="chapter-item expanded "><a href="05_le_combat.html" class="active"><strong aria-hidden="true">5.</strong> Le combat</a></li><li class="chapter-item expanded "><a href="06_la_sante.html"><strong aria-hidden="true">6.</strong> La santé</a></li><li class="chapter-item expanded "><a href="07_equipement.html"><strong aria-hidden="true">7.</strong> L'équipement</a></li><li class="chapter-item expanded "><a href="08_00_pouvoirs.html"><strong aria-hidden="true">8.</strong> Pouvoirs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="08_01_la_marelle.html"><strong aria-hidden="true">8.1.</strong> La Marelle</a></li><li class="chapter-item expanded "><a href="08_02_le_logrus.html"><strong aria-hidden="true">8.2.</strong> Le Logrus</a></li><li class="chapter-item expanded "><a href="08_03_abysse.html"><strong aria-hidden="true">8.3.</strong> L'Abysse</a></li><li class="chapter-item expanded "><a href="08_04_art_des_atouts.html"><strong aria-hidden="true">8.4.</strong> L'Art des Atouts</a></li><li class="chapter-item expanded "><a href="08_05_metamorphose.html"><strong aria-hidden="true">8.5.</strong> Métamorphose</a></li><li class="chapter-item expanded "><a href="08_06_investiture.html"><strong aria-hidden="true">8.6.</strong> Investiture</a></li><li class="chapter-item expanded "><a href="08_07_sorcellerie.html"><strong aria-hidden="true">8.7.</strong> La Sorcellerie</a></li><li class="chapter-item expanded "><a href="08_08_conjuration.html"><strong aria-hidden="true">8.8.</strong> La Conjuration</a></li></ol></li><li class="chapter-item expanded "><a href="09_artefacts.html"><strong aria-hidden="true">9.</strong> Artefacts</a></li><li class="chapter-item expanded "><a href="10_ombres_et_mulivers.html"><strong aria-hidden="true">10.</strong> Ombres et multivers</a></li><li class="chapter-item expanded "><a href="11_contacts_et_allies.html"><strong aria-hidden="true">11.</strong> Contacts et alliés</a></li><li class="chapter-item expanded "><a href="12_les_figurants.html"><strong aria-hidden="true">12.</strong> Les figurants</a></li><li class="chapter-item expanded affix "><li class="part-title">Campagne</li><li class="chapter-item expanded "><a href="13_les_acteurs.html"><strong aria-hidden="true">13.</strong> Les acteurs</a></li><li class="chapter-item expanded "><a href="14_lieux_remarquables.html"><strong aria-hidden="true">14.</strong> Lieux remarquables</a></li><li class="chapter-item expanded affix "><li class="part-title">Annexes</li><li class="chapter-item expanded "><a href="15_fiche_de_personnage.html"><strong aria-hidden="true">15.</strong> Fiche de personnage</a></li><li class="chapter-item expanded "><a href="16_carnet_de_personnage.html"><strong aria-hidden="true">16.</strong> Carnet de personnage</a></li><li class="chapter-item expanded "><a href="17_foundryvtt.html"><strong aria-hidden="true">17.</strong> Foundry VTT</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="le-combat"><a class="header" href="#le-combat">Le Combat</a></h1>
+<p>Le chapitre présente trois manières d’aborder la gestion de conflits. Aucune n’est meilleure que l’autre, vous pouvez utiliser l’une ou l’autre, aucune d’entre elles ou mixer les éléments qui vous conviennent. Ces trois approches sont exposées dans le but principal d’enrichir la description des combats et d’aider à la narration de ces derniers. Elles reposent tous sur le principe du diceless, c’est toujours le plus fort qui l’emporte… quoi que.</p>
+<h3 id="rythme-dun-combat"><a class="header" href="#rythme-dun-combat">Rythme d’un combat</a></h3>
+<p>Le rythme du combat est l’affaire du meneur. Si c’est souvent le personnage ayant le plus haut score de combat qui a l’initiative, c’est le meneur qui décide du déroulement temporel du combat. Chaque phase du combat est appelé Passe. Une Passe est un moment, plus ou moins long où les adversaires échanges des coups, utilisent toutes leur technicité et tentent par de multiples moyens de terrasser leur adversaire. Le déroulement de chaque Passe d’un combat suit toujours le cheminement suivant :</p>
+<ol>
+<li>
+<p>Calcul des scores de combat</p>
+</li>
+<li>
+<p>Les joueurs décrivent leurs actions</p>
+</li>
+<li>
+<p>Le meneur décrit la passe d’arme</p>
+</li>
+<li>
+<p>Résolutions des opportunités et des dégâts</p>
+</li>
+<li>
+<p>Fin du combat ou passe suivante</p>
+</li>
+</ol>
+<h2 id="combat-simplifié"><a class="header" href="#combat-simplifié"><strong>Combat simplifié</strong></a></h2>
+<p>Le combat à Ambre est une version rapide pour se lancer dans la narration d’un conflit. Ses principes sont simples sans être simpliste pour autant : c’est probablement le protagoniste ayant l’attribut combat le plus élevé qui va l’emporter.</p>
+<p>Avant même de rentrer dans les détails il faut s’assurer que l’écart entre les attributs combat des protagonistes n’est pas de 10 ou +. Si c’est le cas, la victoire sera rapide et écrasante par celui ayant le score le plus élevé. Fin du combat. Fin de l’histoire. Dans les autres cas de figures, il faut suivre les étapes de la Passe de combat.</p>
+<h3 id="calcul-des-scores-de-combat"><a class="header" href="#calcul-des-scores-de-combat">Calcul des scores de combat</a></h3>
+<p>Noter le score de combat de chaque protagoniste. Le meneur ajoute les éventuels aspects et autres bonus entrant en jeu pour les pnjs.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Personnages</th></tr></thead><tbody>
+<tr><td style="text-align: center">Attribut</td></tr>
+<tr><td style="text-align: center"><strong>Personnages non joueurs</strong></td></tr>
+<tr><td style="text-align: center">Attribut</td></tr>
+<tr><td style="text-align: center">+ aspect(s)</td></tr>
+<tr><td style="text-align: center">- aspect(s)</td></tr>
+<tr><td style="text-align: center">+ ou - divers</td></tr>
+</tbody></table>
+</div>
+<h3 id="les-joueurs-décrivent-leurs-actions"><a class="header" href="#les-joueurs-décrivent-leurs-actions">Les joueurs décrivent leurs actions</a></h3>
+<p>Les joueurs décrivent les actions entreprises par leurs personnages. Ils peuvent faire intervenir leurs aspects suivants les règles habituelles pour bonifier leur attribut. Le meneur, peut de la même manière, activer un aspect du personnage de manière négative. C’est également à cette étape que tout autre bonus ou malus est appliqué à l’attribut.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Personnages</th></tr></thead><tbody>
+<tr><td style="text-align: center">+ aspect(s)</td></tr>
+<tr><td style="text-align: center">- aspect(s)</td></tr>
+<tr><td style="text-align: center">+ ou- divers</td></tr>
+</tbody></table>
+</div>
+<h3 id="le-meneur-décrit-la-passe-darme"><a class="header" href="#le-meneur-décrit-la-passe-darme">Le meneur décrit la passe d’arme</a></h3>
+<p>Le meneur peut faire varier les scores des protagonistes de plus ou moins 2 points en fonction du contexte, de l’environnement, de la qualité des armes, de la nécessité du récit ou de la description effectuée précédemment par les joueurs. Une fois ceci fait, il compare les scores de combat finaux et décrit la passe d’arme au regard de l’écart.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Protagonistes</th></tr></thead><tbody>
+<tr><td style="text-align: center">Ajustements du meneur + ou - 2</td></tr>
+</tbody></table>
+</div>
+<h4 id="domination-totale-8-et-"><a class="header" href="#domination-totale-8-et-">Domination totale (8 et +)</a></h4>
+<p>Le protagoniste ayant le plus haut score domine totalement le conflit. La victoire est écrasante et expéditive, sauf si celui qui domine en décide autrement. </p>
+<h4 id="supériorité-nette-6-à-7"><a class="header" href="#supériorité-nette-6-à-7">Supériorité nette (6 à 7)</a></h4>
+<p>La domination est nette. Celui qui domine le combat va probablement vaincre son adversaire rapidement et efficacement.</p>
+<h4 id="supériorité-4-à-5"><a class="header" href="#supériorité-4-à-5">Supériorité (4 à 5)</a></h4>
+<p>Si aucun autre éléments ne vient perturber le déroulement de la Passe d’arme cette dernière va être gagnée de manière claire.</p>
+<h4 id="tendu-2-à-3"><a class="header" href="#tendu-2-à-3">Tendu (2 à 3)</a></h4>
+<p>Un combattant se détache de l’autre mais la domination est floue et incertaine. Un retournement de situation est possible lors des Passes suivantes.</p>
+<h4 id="indécise-1"><a class="header" href="#indécise-1">Indécise (1)</a></h4>
+<p>Les combattants semble de force équivalente même si l’un d'eux se détache à peine. Le combat risque de durer dans le temps.</p>
+<h4 id="Égalité-parfaite-0"><a class="header" href="#Égalité-parfaite-0">Égalité parfaite (0)</a></h4>
+<p>Les combattants sont de force identique et leurs actions se neutralisent les unes les autres. Les dommages sont applicables à tous les acteurs s'ils ont une attitude agressive sans préoccupation de leur intégrité physique. S'ils sont dans une attitude défensive le combat, ils vont se préserver des dommages mais les départager va être long... très long...</p>
+<h3 id="résolution-des-opportunités-et-dégâts"><a class="header" href="#résolution-des-opportunités-et-dégâts">Résolution des opportunités et dégâts</a></h3>
+<p>Si le vainqueur de la passe d’arme n’a pas choisi une opportunité, alors les dommages sont appliqués au perdant selon la formule ci-dessous.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Dégâts</th></tr></thead><tbody>
+<tr><td style="text-align: center">Défense Physique - Dégâts = Cases de blessures à cocher</td></tr>
+</tbody></table>
+</div>
+<p>Le vainqueur d'une passe d’arme peut opter pour une opportunité en lieu et place des dégâts.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Opportunité : Désarmer</strong> <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	Désarmer la cible ou prendre un objet qu'elle transporte</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Opportunité : Affaiblir</strong> <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	Faire perde un point de défense de manière temporaire à la cible</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+**Opportunité : Mettre à terre, repousser ou bousculer la cible ** <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	La cible est en difficulté pour la prochaine passe d'arme.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Opportunité : Interdire la cible d'aider un allié</strong> <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	Action circonstancielle qui permet de neutraliser l'aide qu'un  protagoniste pourrait apporter à un autre.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Opportunité : Attaquer plusieurs cibles</strong> <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	Permet de porter un coup à un autre adversaire à portée.</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<strong>Opportunité : Se désengager</strong> <em>Coût : Défense de la cible x 4</em></li>
+</ul>
+<p>​	Permet d'éviter une riposte pour la passe suivante.</p>
+<h3 id="fin-ou-passe-darme-suivante"><a class="header" href="#fin-ou-passe-darme-suivante">Fin ou passe d’arme suivante</a></h3>
+<p>Le combat se poursuit si les protagonistes restent engagés, on passe à la résolution de la Passe d’Armes suivante.</p>
+<h4 id="cas-particulier--adversaires-multiples"><a class="header" href="#cas-particulier--adversaires-multiples">Cas particulier : Adversaires multiples</a></h4>
+<p>Dans le cas où un seul protagoniste affronte plusieurs adversaires simultanément un malus s’applique à l’attribut combat (ou force) du combattant seul. A titre d’exemple, combattre simultanément trois adversaires afflige le combattant d’un malus d’attribut de -6 points.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Adversaires multiples</th></tr></thead><tbody>
+<tr><td style="text-align: center">Malus = nombre d'adversaires  x 2</td></tr>
+</tbody></table>
+</div>
+<h4 id="cas-particulier--rompre-ou-fuir-un-combat"><a class="header" href="#cas-particulier--rompre-ou-fuir-un-combat">Cas particulier : Rompre ou fuir un combat</a></h4>
+<p>Fuir un combat, sans utiliser l'option &quot;Se désengager&quot;, permet de rompre le combat afin d’engager une retraite. Souvent utilisé en combat de mêlée, elle consiste la plupart du temps à se mettre hors de portée des coups de l’adversaire. Rompre le combat contre un adversaire est cependant dangereux, et permet à ce dernier de porter un attaque gratuite.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Rompre ou fuir un combat</th></tr></thead><tbody>
+<tr><td style="text-align: center">Attaque gratuite pour l'adversaire si la passe d'arme est gagnée pour l'adversaire</td></tr>
+</tbody></table>
+</div>
+<h4 id="cas-particulier--utiliser-un-pouvoir"><a class="header" href="#cas-particulier--utiliser-un-pouvoir">Cas particulier : Utiliser un pouvoir</a></h4>
+<p>L’utilisation d’un pouvoir durant un combat dépend de l’initiative des protagonistes. Si l’attribut dépendant du pouvoir utilisé est supérieur au combat (ou à la force dans un combat au corps à corps) de l’adversaire, le personnage peut utiliser son pouvoir lors de l’étape 2. Si le combat n’est pas rompu, le personnage subit un malus de -4 pour le reste de la passe d’armes. Si le personnage n’a pas l’initiative, il subit un malus de -6 et voit l’effet de son pouvoir intervenir lors de la phase 4.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Utiliser un pouvoir</th></tr></thead><tbody>
+<tr><td style="text-align: center">Si  l’attribut du pouvoir &gt; combat de l’adversaire  : <br />Malus à  l’attribut combat -4 et utilisation  du pouvoir en phase 2</td></tr>
+<tr><td style="text-align: center">Si  l’attribut du pouvoir &lt; combat de l’adversaire : <br />Malus à  l’attribut combat -6 et utilisation  du pouvoir en phase 4</td></tr>
+</tbody></table>
+</div>
+<h4 id="cas-particulier--force-contre-combat"><a class="header" href="#cas-particulier--force-contre-combat">Cas particulier : Force contre Combat</a></h4>
+<p>Dans la cas d'un combat qui mêle Force et Combat, comme par exemple un combattant avec un ceste et au autre avec une dague, il suffit de substituer de comparer les attributs entre eux.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="04_le_karma.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="06_la_sante.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="04_le_karma.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="06_la_sante.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

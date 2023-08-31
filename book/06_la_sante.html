@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>La santé</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="00_introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Règles</li><li class="chapter-item expanded "><a href="01_le_personnage.html"><strong aria-hidden="true">1.</strong> Le personnage</a></li><li class="chapter-item expanded "><a href="02_creation_de_personnage.html"><strong aria-hidden="true">2.</strong> Création de personnage</a></li><li class="chapter-item expanded "><a href="03_les_tests.html"><strong aria-hidden="true">3.</strong> Les tests</a></li><li class="chapter-item expanded "><a href="04_le_karma.html"><strong aria-hidden="true">4.</strong> Le Karma</a></li><li class="chapter-item expanded "><a href="05_le_combat.html"><strong aria-hidden="true">5.</strong> Le combat</a></li><li class="chapter-item expanded "><a href="06_la_sante.html" class="active"><strong aria-hidden="true">6.</strong> La santé</a></li><li class="chapter-item expanded "><a href="07_equipement.html"><strong aria-hidden="true">7.</strong> L'équipement</a></li><li class="chapter-item expanded "><a href="08_00_pouvoirs.html"><strong aria-hidden="true">8.</strong> Pouvoirs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="08_01_la_marelle.html"><strong aria-hidden="true">8.1.</strong> La Marelle</a></li><li class="chapter-item expanded "><a href="08_02_le_logrus.html"><strong aria-hidden="true">8.2.</strong> Le Logrus</a></li><li class="chapter-item expanded "><a href="08_03_abysse.html"><strong aria-hidden="true">8.3.</strong> L'Abysse</a></li><li class="chapter-item expanded "><a href="08_04_art_des_atouts.html"><strong aria-hidden="true">8.4.</strong> L'Art des Atouts</a></li><li class="chapter-item expanded "><a href="08_05_metamorphose.html"><strong aria-hidden="true">8.5.</strong> Métamorphose</a></li><li class="chapter-item expanded "><a href="08_06_investiture.html"><strong aria-hidden="true">8.6.</strong> Investiture</a></li><li class="chapter-item expanded "><a href="08_07_sorcellerie.html"><strong aria-hidden="true">8.7.</strong> La Sorcellerie</a></li><li class="chapter-item expanded "><a href="08_08_conjuration.html"><strong aria-hidden="true">8.8.</strong> La Conjuration</a></li></ol></li><li class="chapter-item expanded "><a href="09_artefacts.html"><strong aria-hidden="true">9.</strong> Artefacts</a></li><li class="chapter-item expanded "><a href="10_ombres_et_mulivers.html"><strong aria-hidden="true">10.</strong> Ombres et multivers</a></li><li class="chapter-item expanded "><a href="11_contacts_et_allies.html"><strong aria-hidden="true">11.</strong> Contacts et alliés</a></li><li class="chapter-item expanded "><a href="12_les_figurants.html"><strong aria-hidden="true">12.</strong> Les figurants</a></li><li class="chapter-item expanded affix "><li class="part-title">Campagne</li><li class="chapter-item expanded "><a href="13_les_acteurs.html"><strong aria-hidden="true">13.</strong> Les acteurs</a></li><li class="chapter-item expanded "><a href="14_lieux_remarquables.html"><strong aria-hidden="true">14.</strong> Lieux remarquables</a></li><li class="chapter-item expanded affix "><li class="part-title">Annexes</li><li class="chapter-item expanded "><a href="15_fiche_de_personnage.html"><strong aria-hidden="true">15.</strong> Fiche de personnage</a></li><li class="chapter-item expanded "><a href="16_carnet_de_personnage.html"><strong aria-hidden="true">16.</strong> Carnet de personnage</a></li><li class="chapter-item expanded "><a href="17_foundryvtt.html"><strong aria-hidden="true">17.</strong> Foundry VTT</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="la-santé"><a class="header" href="#la-santé">La Santé</a></h1>
+<p>La santé est composé de plusieurs états de blessures qui sont les suivants : Légères, Sérieuses, Graves et Critique.</p>
+<p>Le nombre de ces blessures encaissables est déterminé par le score d'Endurance.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Endurance</th><th></th><th style="text-align: center">Blessures légères</th><th style="text-align: center">Blessures sérieuses</th><th style="text-align: center">Blessures graves</th><th style="text-align: center">Blessures Critique</th></tr></thead><tbody>
+<tr><td style="text-align: center">1 à 16</td><td>De faible à doué</td><td style="text-align: center">☐☐</td><td style="text-align: center">☐</td><td style="text-align: center">☐</td><td style="text-align: center">☐</td></tr>
+<tr><td style="text-align: center">17 à 20</td><td>Expert à maître</td><td style="text-align: center">☐☐☐</td><td style="text-align: center">☐☐</td><td style="text-align: center">☐</td><td style="text-align: center">☐</td></tr>
+<tr><td style="text-align: center">21 à 24</td><td>Maître à Monstrueux</td><td style="text-align: center">☐☐☐☐</td><td style="text-align: center">☐☐☐</td><td style="text-align: center">☐☐</td><td style="text-align: center">☐</td></tr>
+<tr><td style="text-align: center">25 à 28</td><td>Monstrueux à surnaturel</td><td style="text-align: center">☐☐☐☐☐</td><td style="text-align: center">☐☐☐☐</td><td style="text-align: center">☐☐☐</td><td style="text-align: center">☐☐</td></tr>
+<tr><td style="text-align: center">29 à 32</td><td>Surnaturel à Paragon</td><td style="text-align: center">☐☐☐☐☐☐</td><td style="text-align: center">☐☐☐☐☐</td><td style="text-align: center">☐☐☐☐</td><td style="text-align: center">☐☐☐</td></tr>
+</tbody></table>
+</div>
+<p><strong>Dégâts</strong> :</p>
+<p>Armes légères : Blessures légères ☐☐☐☐ 4</p>
+<p>Armes standard : Blessures sérieuses ☐☐☐ 8</p>
+<p>Armes lourdes : Blessures graves ☐☐ 12</p>
+<p>Armes mortelles : Blessures critiques ☐ 16</p>
+<p><em>Extra dur : La catégorie de dégâts augmente de 1, ne s'altère pas +4</em></p>
+<p><em>Double dommages : catégorie de dégâts +2 +8</em></p>
+<p><em>Mortelle : Dégâts critique, passe les armures invulnérable+12</em></p>
+<h3 id="armes"><a class="header" href="#armes"><strong>Armes</strong></a></h3>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Catégorie</th><th style="text-align: center">Menace</th><th style="text-align: center">Défense</th><th>Armes de mélée</th><th style="text-align: center">Aspects</th></tr></thead><tbody>
+<tr><td style="text-align: center">Arme improvisée</td><td style="text-align: center">1</td><td style="text-align: center">-</td><td>Gourdin, outil de paysan ou d'artisan</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arme simple</td><td style="text-align: center">1</td><td style="text-align: center">-</td><td>Ceste, hachette, massue</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arme légère</td><td style="text-align: center">1</td><td style="text-align: center">-</td><td>Stylet, dague, épée courte, fleuret</td><td style="text-align: center">Riposte</td></tr>
+<tr><td style="text-align: center">Arme de mélée</td><td style="text-align: center">2</td><td style="text-align: center">-</td><td>Ceste lourd, cimeterre, épée bâtarde, épée longue, épieu, glaive, fléau d’arme, hache, lance, masse d’arme, rapière</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arme improvisée lourde</td><td style="text-align: center">2</td><td style="text-align: center">-</td><td>Faux, autres lourds outils de paysan ou d’artisan</td><td style="text-align: center">Arme à deux mains, encombrante</td></tr>
+<tr><td style="text-align: center">Arme de mêlée lourde</td><td style="text-align: center">3</td><td style="text-align: center">-</td><td>Cimeterre à deux mains, épée à deux mains, hache à deux mains, hallebarde, marteau de guerre</td><td style="text-align: center">Arme à deux mains, encombrante</td></tr>
+<tr><td style="text-align: center">Arme défensive légère</td><td style="text-align: center">0</td><td style="text-align: center">0</td><td>Petit Bouclier</td><td style="text-align: center">Riposte</td></tr>
+<tr><td style="text-align: center">Arme défensive</td><td style="text-align: center">0</td><td style="text-align: center">+1</td><td>Bouclier</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Arme défensive lourde</td><td style="text-align: center">0</td><td style="text-align: center">+2</td><td>Pavois</td><td style="text-align: center">Encombrant</td></tr>
+</tbody></table>
+</div>
+<p><strong>Aspects d'armes</strong> :</p>
+<ul>
+<li>Qualité exceptionnelle (selon un Ambrien) +1 entre menace et défense</li>
+<li>Qualité extraordinaire (selon un Ambrien) +2 entre menace et défense</li>
+<li>Arme à deux mains : l’arme ne peut se manier qu’à deux mains.</li>
+<li>Encombrante – un personnage encombré ne peut pas enchaîner son tour d’action </li>
+<li>Riposte – l’arme utilisée en main gauche permet d’augmenter de 1 l’effet d’une riposte</li>
+</ul>
+<p><strong>Conjuration &amp; enchantement</strong> :</p>
+<ul>
+<li>Extra dur : Menace +1, ne s'altère pas</li>
+<li>Double dommages : Menace +2, ne s'altère pas</li>
+<li>Mortelle : Menace +3, passe les armures invulnérables</li>
+</ul>
+<h3 id="protections"><a class="header" href="#protections"><strong>Protections</strong></a></h3>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Catégorie</th><th style="text-align: center">Menace</th><th style="text-align: center">Défense</th><th>Armes de mélée</th><th style="text-align: center">Aspects</th></tr></thead><tbody>
+<tr><td style="text-align: center">Armure légère</td><td style="text-align: center">0</td><td style="text-align: center">1</td><td>Armure de cuir, de gladiateur, manteau de cuir, plastron de cuir rigide ou de bois, tenue de tissu épais</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Armure intermédiaire</td><td style="text-align: center">0</td><td style="text-align: center">2</td><td>Brigandine, broigne, chemise de maille, tenue de cuir renforcée de mailles, lorica portée sur une protection matelassée</td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">Armure lourde</td><td style="text-align: center">0</td><td style="text-align: center">3</td><td>Plastron métallique et protection de cuir, tenue de cuir renforcée de protections métalliques, tenue de mailles et plaques, tenue de mailles intégrale</td><td style="text-align: center">Encombrante</td></tr>
+<tr><td style="text-align: center">Armure intégrale</td><td style="text-align: center">0</td><td style="text-align: center">4</td><td></td><td style="text-align: center"></td></tr>
+</tbody></table>
+</div>
+<p><strong>Aspects d'armes</strong> :</p>
+<ul>
+<li>Qualité exceptionnelle (selon un Ambrien) +1 en défense</li>
+<li>Qualité extraordinaire (selon un Ambrien) +2 en défense</li>
+<li>Encombrante – un personnage encombré ne peut pas enchaîner son tour d’action </li>
+</ul>
+<p><strong>Conjuration &amp; enchantement</strong> :</p>
+<ul>
+<li>Résistance aux armes blanches : Défense +1, ne s'altère pas</li>
+<li>Résistance aux armes à feu : Défense +2, ne s'altère pas</li>
+<li>Invulnérable : Défense +3, ne s'altère pas</li>
+</ul>
+<div class="table-wrapper"><table><thead><tr><th></th><th style="text-align: center"></th></tr></thead><tbody>
+<tr><td>Arbalète, Arc long</td><td style="text-align: center">D8</td></tr>
+<tr><td>Arbalète lourde</td><td style="text-align: center">D10</td></tr>
+<tr><td>Arc court</td><td style="text-align: center">D6</td></tr>
+<tr><td>Arc de chasse</td><td style="text-align: center">D6+1</td></tr>
+<tr><td>Couteau de jet  Fronde</td><td style="text-align: center">D6</td></tr>
+<tr><td>Hachette</td><td style="text-align: center">D6+1</td></tr>
+<tr><td>Javelot</td><td style="text-align: center">D8</td></tr>
+</tbody></table>
+</div>
+<p><strong>PISTOLETS</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Beretta 1934</td><td>D8</td></tr>
+<tr><td>Colt .45</td><td>D8+1</td></tr>
+<tr><td>Derringer</td><td>D6</td></tr>
+<tr><td>Luger P08</td><td>D8</td></tr>
+<tr><td>S&amp;W 38</td><td>D6+1</td></tr>
+<tr><td>Tokarev</td><td>D8</td></tr>
+</tbody></table>
+</div>
+<p><strong>MITRAILLETTES</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Mauser MG-34</td><td>D8</td></tr>
+<tr><td>Thompson A1</td><td>D8</td></tr>
+</tbody></table>
+</div>
+<p><strong>ARMES D’ÉPAULE</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Fusil à éléphant  Fusil à pompe  Fusil de chasse</td><td>D12  D10+1  D8</td></tr>
+<tr><td>Mauser mod. 1898</td><td>D10</td></tr>
+<tr><td>Winchester 1894</td><td>D10</td></tr>
+</tbody></table>
+</div>
+<p><strong>ARMES LOURDES</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>Mitrailleuse</td><td>D12</td></tr>
+<tr><td>Lance-flammes</td><td>D10</td></tr>
+</tbody></table>
+</div>
+<p><strong>GRENADES, EXPLOSIFS</strong></p>
+<div class="table-wrapper"><table><thead><tr><th></th><th></th></tr></thead><tbody>
+<tr><td>**Cocktail Molotov</td><td>D8</td></tr>
+<tr><td>Grenade défensive</td><td>D16</td></tr>
+<tr><td>Grenade offensive</td><td>D10</td></tr>
+<tr><td>Stielhandgranate</td><td>D12</td></tr>
+<tr><td>Dynamite (bâton)</td><td>D10</td></tr>
+</tbody></table>
+</div>
+<p><strong>Mains nues	 D4	 	 -	 -</strong>
+<strong>Baton	 D6	 	 -	 -</strong>
+<strong>Batte de baseball	 D6+1	 	 -	 6</strong>
+<strong>Chaîne de moto	 D6	 	 -	 4</strong>
+<strong>Couteau, cran d’arrêt	 D6	 	 Légère	 3</strong>
+<strong>Couteau de combat	 D6+1	 	 Légère	 8</strong>
+<strong>Griffes de combat	 D6	 	 Légère	 5</strong>
+<strong>Hache	 D8	 	 -	 4</strong>
+<strong>Katana	 D10	 	 Légère	 30</strong>
+<strong>Machette	 D6+1	 	 -	 6</strong>
+<strong>Matraque, tonfa	 D6	 	 -	 3</strong>
+<strong>Nunchaku	 D6	 	 -	 5</strong>
+<strong>Pelle	 D8	 	 -	 2</strong>
+<strong>Pied-de-biche	 D6	 	 -	 3</strong>
+<strong>Poing américain	 D4+1	 	 -	 1</strong>
+<strong>Tazer	 D6	 	 Immobilisation, Nécessite : piles	 15</strong>
+<strong>Tronçonneuse	 D12	 	 Nécessite : essence	 20</strong></p>
+<div class="table-wrapper"><table><thead><tr><th><strong>Blouson en cuir renforcé</strong></th><th><strong>1</strong></th><th><strong>-</strong></th><th><strong>5</strong></th></tr></thead><tbody>
+<tr><td><strong>Bouclier de police</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>25</strong></td></tr>
+<tr><td><strong>Casque de moto</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>15</strong></td></tr>
+<tr><td><strong>Casque de police</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>20</strong></td></tr>
+<tr><td><strong>Combinaison cuir renforcé 2</strong></td><td><strong>Chaleur</strong></td><td><strong>15</strong></td><td></td></tr>
+<tr><td><strong>Gilet pare-balles</strong></td><td><strong>3</strong></td><td><strong>-</strong></td><td><strong>40</strong></td></tr>
+<tr><td><strong>Fourrures</strong></td><td><strong>1</strong></td><td><strong>Chaleur</strong></td><td><strong>10</strong></td></tr>
+</tbody></table>
+</div>
+<p><strong>Arbalète moderne	 D8+1	 50	 1	 Recharge (mineure)	 10</strong>
+<strong>Arc moderne	 D8	 30	 1	 -	 10</strong>
+<strong>Bazooka	 D16	 50	 1	 Explosion (5)	 180</strong>
+<strong>Canon scié	 D12	 3	 2	 Recharge (mineure)	 80</strong>
+<strong>Carabine	 D8	 200	 15	 -	 90</strong>
+<strong>Fusil à pompe	 D10	 5	 10	 Recharge (mineure)	 90</strong>
+<strong>Fusil de chasse D10	 20	 2	 -	 80</strong>
+<strong>Fusil de sniper	 D8+1	 400	 20	 Viseur	 250</strong>
+<strong>Fusil harpon	 D10	 5	 1	 Recharge (majeure)	 10</strong>
+<strong>Fusil-mitrailleur	 D10	 50	 30	 Automatique	 130</strong>
+<strong>Grenade défensive	 D16	 FORx2	 1	 Explosion (10)	 10</strong>
+<strong>Grenade fumigène	 -	 FORx2	 1	 Explosion (3)	 3</strong>
+<strong>Grenade incendiaire	 D12	 FORx2	 1	 Explosion (2), Feu	 7</strong>
+<strong>Grenade lacrymogène	 -	 FORx2	 1	 Explosion (5)	 4</strong>
+<strong>Grenade offensive	 D10	 FORx2	 1	 Explosion (2)	 5</strong>
+<strong>Lance-flammes	 D12	 4	 5	 Explosion (1), Feu	 200</strong>
+<strong>Lance-grenades	 -	 50	 1	 -	 70</strong>
+<strong>Mitrailleuse	 D10	 100	 100	 Automatique	 150</strong>
+<strong>Mitrailleuse lourde	 D12	 100	 100	 Automatique	 200</strong>
+<strong>Pistolet	 D8	 20	 10	 Semi-automatique	 25</strong>
+<strong>Pistolet, gros calibre	 D10	 20	 10	 Semi-automatique	 30</strong>
+<strong>Pistolet-mitrailleur	 D8	 30	 30	 Automatique	 100</strong>
+<strong>Revolver	 D8	 20	 6	 -	 15</strong></p>
+<p><strong>Dynamite	 D8	 -1 Flamme ou détonateur	 Explosion (5)	 10</strong>
+<strong>Nitroglycérine	 D14	 -2	 Choc	 Explosion (7)	 30</strong>
+<strong>TNT	 D10	 -	 Détonateur	 Explosion (4)	 20</strong>
+<strong>Plastic	 D12	 -	 Détonateur	 Explosion (5)	 25</strong></p>
+<p><strong>Mains nues	 D4	 	 -	 -</strong>
+<strong>Batte de baseball	 D6+1	 	 -	 40</strong>
+<strong>Chaîne de moto	 D6	 	 -	 20</strong>
+<strong>Couteau, cran d’arrêt	 D6	 	 Légère	 10</strong>
+<strong>Couteau de combat	 D6+1	 	 Légère	 50</strong>
+<strong>Gants de combat G9	 D6 	 Incapacitante (D12)	 800</strong>
+<strong>Griffes de combat	 D6	 	 Légère	 80</strong>
+<strong>Hache	 D8	 	 -	 20</strong>
+<strong>Katana	 D10	 	 Légère	 150</strong>
+<strong>Machette	 D6+1	 	 -	 25</strong>
+<strong>Matraque, tonfa	 D6	 	 -	 20</strong>
+<strong>Monokatana Tensai	 D12	 	 Légère	 600</strong>
+<strong>Nunchaku	 D6	 	 -	 15</strong>
+<strong>Pied-de-biche	 D6	 	 -	 10</strong>
+<strong>Poing américain	 D4+1	 	 -	 10</strong>
+<strong>Tazer	 D6	 	 Nécessite : piles, Incapacitante	 25</strong>
+<strong>Tronçonneuse	 D12	 	 Nécessite : essence	 80</strong></p>
+<div class="table-wrapper"><table><thead><tr><th><strong>Blouson en cuir renforcé</strong></th><th><strong>1</strong></th><th><strong>-</strong></th><th><strong>60</strong></th></tr></thead><tbody>
+<tr><td><strong>Bouclier de police</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>200</strong></td></tr>
+<tr><td><strong>Casque de moto</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>40</strong></td></tr>
+<tr><td><strong>Casque de police</strong></td><td><strong>+1</strong></td><td><strong>-</strong></td><td><strong>50</strong></td></tr>
+<tr><td><strong>Combinaison cuir renforcé 2</strong></td><td><strong>Chaleur</strong></td><td><strong>180</strong></td><td></td></tr>
+<tr><td><strong>Gilet pare-balles</strong></td><td><strong>3</strong></td><td><strong>-</strong></td><td><strong>400</strong></td></tr>
+<tr><td><strong>Armure de combat</strong></td><td><strong>4</strong></td><td><strong>-</strong></td><td><strong>1000</strong></td></tr>
+</tbody></table>
+</div>
+<p><strong>RMES DE TRAIT</strong>
+<strong>Arbalète Exterminator D8+1	 30	 8	 -	 250</strong>
+<strong>Arc Nighthawk D8	 30	 1	 -	 150</strong>
+<strong>Pistolet à aiguilles	 D4	 15	 10	 Drogues	 220</strong>
+<strong>PISTOLETS LÉGERS</strong>
+<strong>InDefens C-14	 D6	 15	 10	 Semi-automatique	 100</strong>
+<strong>Militarms Angelfire D6+1	 20	 10	 Semi-automatique	 200</strong>
+<strong>Cobra Pistol	 D8	 25	 15	 Semi-automatique	 250</strong>
+<strong>Tazer Thunderstruck D8	 5	 1	 Incapacitante	 150</strong>
+<strong>PISTOLETS LOURDS</strong>
+<strong>Colt MT35	 D10	 30	 10	 Semi-automatique	 350</strong>
+<strong>Militarms Fury 950	 D8+1	 30	 12	 Semi-automatique	 430</strong>
+<strong>Tensai Predator	 D10+1	 25	 10	 Semi-automatique	 500</strong>
+<strong>PISTOLETS MITRAILLEURS</strong>
+<strong>H&amp;K MPK - 91	 D8	 25	 30	 Automatique	 500</strong>
+<strong>Ingram Ronin	 D10	 20	 20	 Automatique	 600</strong>
+<strong>Uzi 440	 D8	 20	 40	 Automatique	 550</strong>
+<strong>FUSILS A POMPE</strong>
+<strong>Tensai Hellhound	 D12	 5	 10	 Recharge (mineure)	 500</strong>
+<strong>Militarms Finisher D12+1	 5	 20	 Recharge (mineure)	 00</strong>
+<strong>FUSILS DE SNIPER</strong>
+<strong>APEX Red Arrow	 D10	 800	 20	 Semi-automatique	 2000</strong>
+<strong>FUSILS D’ASSAUT</strong>
+<strong>Kalachnikov A81	 D10	 50	 35	 Automatique	 500</strong>
+<strong>Ingram Scorpio	 D12	 60	 35	 Automatique	 590</strong>
+<strong>Tensai Mandible	 D12+1	 50	 30	 Automatique	 650</strong>
+<strong>ARMES LOURDES</strong>
+<strong>Canon laser Militarms	 D14	 100	 10	 -	 9000</strong>
+<strong>Lance-flammes Inferno	 D10	 5	 10	 Explosion (1), Feu	 1490</strong>
+<strong>Lance-Missiles B220	 D16	 80	 1	 Explosion (5)	 3500</strong>
+<strong>GRENADES</strong>
+<strong>Grenade défensive	 D16	 FORx2	 1	 Explosion (10)	 100</strong>
+<strong>Grenade offensive	 D10	 FORx2	 1	 Explosion (2)	 30</strong>
+<strong>Grenade sonique	 -	 FORx2	 1	 Explosion (5)	 50</strong>
+<strong>Grenade fumigène	 -	 FORx2	 1	 Explosion (3)	 50</strong></p>
+<div class="table-wrapper"><table><thead><tr><th><strong>Bagarre, mains nues  Couteau,</strong></th><th><strong>D4  D6</strong></th><th><strong>- Légère   Légère   Légère, Boost  Légère, Boost  Légère   Boost   Incapacitante  Légère +</strong></th></tr></thead><tbody>
+<tr><td><strong>30</strong></td><td></td><td></td></tr>
+<tr><td><strong>Double-lance énergétique D12</strong></td><td><strong>4400</strong></td><td></td></tr>
+<tr><td><strong>Electro-poignard  Épée énergétique  Fouet monofilament  Gant énergétique  Matraque paralysante  Sabre laser  Vibro-baïonnette  Vibro-lame</strong></td><td><strong>D8  D10  D10  D12  -  D6+1  D6+1    D10+1</strong></td><td><strong>1400 4000 3000 5000 1000 10000 2000 3000</strong></td></tr>
+</tbody></table>
+</div>
+<p><strong>Fusil gauss	 D8	 50	 Gauss	 4000</strong>
+<strong>Fusil à plasma	 D16+	 30	 	 10000</strong>
+<strong>Fusil de sniper laser	 D10+	 100	 Boost, Viseur	 6000</strong>
+<strong>Fusil laser, blaster	 D10+	 50	 Automatique, Boost	 3000</strong>
+<strong>Fusil laser lourd	 D12+	 80	 Automatique, Boost	 5000</strong>
+<strong>Fusil paralysant	 D12	 25	 Incapacitante, Boost	 3600</strong>
+<strong>Grenade D12	 FOR x2	 Explosion (5)	 800</strong>	
+<strong>Grenade paralysante	 D10	 FOR x2	 Incapacitante, Explosion (5)	 1000</strong>
+<strong>Grenade plasmique	 D16	 FOR x2	 Explosion (10)	 1800</strong>
+<strong>Grenade sonique	 -	 FOR x2	 Explosion (20)	 600</strong>
+<strong>Grenade aveuglante	 -	 FOR x2	 Explosion (5)	 550</strong>
+<strong>Pistolaser, blaster	 D8+	 20	 Boost, Semi-automatique	 2000</strong>
+<strong>Pistolet de défense	 D6+	 10	 Explosif, selon moi…	 1100</strong>
+<strong>Pistolet gauss	 D8	 20	 Gauss	 2200</strong>
+<strong>Pistolet paralysant	 D10	 5	 Incapacitante	 1600</strong>
+<strong>Pistolet plasmique	 D10+	 15	 4000</strong>
+<strong>Supra-pistolet	 D12+	 20	 Boost	 6000</strong></p>
+<p><strong>Veste renforcée, blindée	 1	 -	 1500</strong>
+<strong>Bouclier énergétique	 +1	 Boost	 5000</strong>
+<strong>Armure de combat	 3	 -	 7000</strong>
+<strong>Pièces d’armure	 2	 -	 3500</strong>
+<strong>Armure de combat lourde	 4	 -	 10000</strong>
+<strong>Casque intégral	 +1	 -	 2000</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="05_le_combat.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="07_equipement.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="05_le_combat.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="07_equipement.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

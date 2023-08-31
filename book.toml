@@ -5,6 +5,4 @@ multilingual = false
 src = "src"
 
 [output.html]
-theme = "Rust"
 default-theme = "Rust"
-preferred-dark-theme = "Rust"
