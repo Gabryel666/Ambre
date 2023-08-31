@@ -11,8 +11,8 @@ Le processus de création de personnage suit un nombre d’étapes qui peuvent �
 
 Un personnage est toujours créé sur la base de **120 points**. Si le joueur le désir il peut s’engager à effectuer quelques contributions afin d’augmenter son capital de points de création. Enfin, si le joueur venait à dépenser plus de points qu’il n’en possède, les dépenses excédentaires viendront alimenter le Karma en négatif à concurrence d’un maximum de **20 points**.
 
-**Contribution : Journal**  
-*Gain : + 20 pts*  
+**Contribution : Journal**</br>
+Gain : + 20 pts
 Le joueur s’engage à écrire sous forme de journal les péripéties de son personnage. Il doit remettre au moins une fois toutes les deux séances son travail au meneur.
 
 **Contribution : Dessins d’atouts**  
