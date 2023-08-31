@@ -20,11 +20,11 @@ Le joueur s’engage à écrire sous forme de journal les péripéties de son pe
 Le joueur s’engage à dessiner / produire des atouts évocateurs des dernières séances de jeux. Il doit remettre au moins une fois toutes les deux séances son travail au meneur.
 
 **Contribution : Enregistrement de partie**
-*Gain : + 5 pts
+*Gain : + 5 pts*
 Le joueur s’engage enregistrer, organiser et classer les enregistrements des parties et les mettre à disposition du Meneur et des joueurs.
 
 **Contribution : Compte rendu de partie**
-*Gain : + 10 pts
+*Gain : + 10 pts*
 Le joueur s’engage à effectuer un compte rendu de partie de la manière la plus neutre possible et compréhensible de la plupart des joueurs. Il doit remettre une copie à chaque séance au MJ qui après validation pourra la distribuer à l’ensemble des joueurs. 
 
 ## **Choix du Sang**
@@ -37,7 +37,7 @@ L’étape fondatrice de la création de personnage est le choix du Sang. Jouer 
 | Chaos    | 18 pts   |
 | Ombre    | Gratuit  |
 
-### **Sang d’Ambre (50 points)**
+### **Sang d’Ambre**
 
 Jouer un Ambrien est une option solide de départ. Cela permet au personnage d’être certain d’avoir une ascendance Ambrienne tout en donnant une possibilité d’accès raisonnable à la Marelle. La proximité des Ambriens avec le puissant Signe de l’Ordre en fait des adversaires redoutables.
 
@@ -45,19 +45,20 @@ Un Ambrien sera toujours doté en général d’une bonne Vitalité ; nécessair
 
 Il est évident qu’un Ambrien ayant en lui le Signe du Logrus ou possédant la Métamorphose devrait à minima avoir des rapports d’une qualité exceptionnelle avec les Cours du Chaos ou à maxima une double ascendance Ambre / Cours du Chaos tel que Merlin. Enfin, les professeurs de Sorcellerie, de Conjuration ou d’Art des Atouts étant plutôt rares en Ambre, il sera bon d’établir une solide explication si le personnage s’oriente dans ce genre de disciplines. Le Karma est quant à lui libre de toute considération sans orientation particulière à la création.
 
-*Score de départ des attributs de Corps : 17*
-
-*Score de départ des attributs d’Esprit : 17*
-
-*Conditions : Vitalité > 20*
-
-*Pouvoirs accessibles : Empreinte de la Marelle, Marelle Avancée, Signe du Logrus, Métamorphose, Art des Atouts, Grand Art des Atouts, Sorcellerie, Sorcellerie Avancée, Conjuration, Conjuration Avancée.*
+|                   Sang d'Ambre (50 points)                   |
+| :----------------------------------------------------------: |
+|        *Score de départ des attributs de Corps : 17*         |
+|        *Score de départ des attributs d’Esprit : 17*         |
+|                 *Conditions : Vitalité > 20*                 |
+| *Pouvoirs accessibles : Empreinte de la Marelle, Marelle Avancée, Signe du Logrus, Métamorphose, Art des Atouts, Grand Art des Atouts, Sorcellerie, Sorcellerie Avancée, Conjuration, Conjuration Avancée.* |
 
 ### **Sang du Chaos (18 points)**
 
 Les Seigneurs du Chaos offrent des options plus variés dans le type de personnage. Doué d’une grande adaptabilité, ils sont également dépositaire d’une histoire multimillénaire à côté desquelles les Princes d’Ambre semblent des enfants.
 
 Un Seigneur du Chaos sera doté d’une bonne vitalité et il n’est pas rare qu’il soit versé dans un ou plusieurs arts mystiques. Encore plus que pour un Ambrien, posséder l’empreinte de la Marelle sera difficilement justifiable autrement que par une double ascendance. Enfin, si les artefacts ne sont pas rares, il est possible d’acheter également un ou plusieurs contrats démoniaques liés au personnage ou à sa lignée.
+
+
 
 *Score de départ des attributs de Corps : 13*
 
